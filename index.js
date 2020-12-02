@@ -8,9 +8,8 @@ client.on('message', message =>
 {
     if(message.author.bot || !message.content.startsWith(PREFIX)) return; //verificam sa nu fie bot si sa fie prefixul
 
-    const args = message.content.slice(PREFIX.length).split(' ');
+    const args = message.content.slice(PREFIX.length).split(' ');// despartim dupa spatiu
 
-    console.log(args[0]);
     switch (args[0].toLowerCase()){
         case 'ping':
             message.channel.send('pong!').catch(console.error);
