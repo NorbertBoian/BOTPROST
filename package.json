@@ -19,7 +19,8 @@
   "homepage": "https://github.com/andyas29/discord-bot-musica#readme",
   "dependencies": {
     "@discordjs/opus": "^0.3.3",
-    "discord.js": "^12.5.1"
+    "discord.js": "^12.5.1",
+    "ytdl-core": "^4.1.1"
   },
   "devDependencies": {
     "prettier": "^2.2.1"
