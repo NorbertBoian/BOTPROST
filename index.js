@@ -1,6 +1,7 @@
 const { PREFIX, TOKEN } = require("./config.json");
 const Discord = require("discord.js");
 const ytdl = require("ytdl-core");
+var ytpl = require("ytpl");
 const client = new Discord.Client();
 client.login(TOKEN);
 
@@ -16,9 +17,8 @@ client.on("message", async (message) => {
     case "join":
       if (message.member.voice.channel) {
         const connection = await message.member.voice.channel.join();
-
-        connection.play(
-          ytdl("https://www.youtube.com/watch?v=dQw4w9WgXcQ", {
+        const dispatcher = connection.play(
+          ytdl("https://www.youtube.com/watch?v=H9154xIoYTA", {
             filter: "audioonly",
           })
         );
