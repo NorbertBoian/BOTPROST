@@ -5,6 +5,14 @@ var ytpl = require("ytpl");
 const client = new Discord.Client();
 client.login(TOKEN);
 
+let py = ytpl("PLuXpx63rTncIzz0yJLyE7lTSUo2lBnqrl")
+  .then((playlist) => {
+    console.log(playlist);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+
 client.on("message", async (message) => {
   if (message.author.bot || !message.content.startsWith(PREFIX)) return; //verificam sa nu fie bot si sa fie prefixul
 
@@ -16,12 +24,21 @@ client.on("message", async (message) => {
       break;
     case "join":
       if (message.member.voice.channel) {
+        let index = 0;
         const connection = await message.member.voice.channel.join();
         const dispatcher = connection.play(
-          ytdl("https://www.youtube.com/watch?v=H9154xIoYTA", {
+          ytdl(py[index].url, {
             filter: "audioonly",
           })
         );
+        dispatcher.on("finish", () => {
+          index++;
+          const dispatcher = connection.play(
+            ytdl(py[index].url, {
+              filter: "audioonly",
+            })
+          );
+        });
       } else {
         message.reply("You need to join a voice channel first!");
       }
