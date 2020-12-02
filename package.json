@@ -33,5 +33,22 @@
     "prettier": "^2.2.1",
     "ts-node-dev": "^1.0.0",
     "typescript": "^4.1.2"
+=======
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andyas29/discord-bot-musica.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andyas29/discord-bot-musica/issues"
+  },
+  "homepage": "https://github.com/andyas29/discord-bot-musica#readme",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.3",
+    "discord.js": "^12.5.1"
   }
 }
