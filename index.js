@@ -4,10 +4,10 @@ const ytdl = require("ytdl-core");
 var ytpl = require("ytpl");
 const client = new Discord.Client();
 client.login(TOKEN);
-
-let py = ytpl("PLuXpx63rTncIzz0yJLyE7lTSUo2lBnqrl")
+var py;
+ytpl("PL36384B2DAC7D315B")
   .then((playlist) => {
-    console.log(playlist);
+    py = playlist.items;
   })
   .catch((err) => {
     console.error(err);
