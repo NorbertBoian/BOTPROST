@@ -34,20 +34,52 @@ client.on("message", async (message) => {
         memberVoiceChannel.leave();
         break;
       case "play":
+        // const connection = await memberVoiceChannel.join();
+        // const url = args[1];
+        // if (url.includes("list")) {
+        //   const response = await ytpl(url);
+        //   const items = response.items;
+        //   const urls = items.map((item) => item.url);
+        //   const finish = () => {
+        //     urls.shift();
+        //     play();
+        //   };
+        //   const play = () => {
+        //     console.log(urls[0]);
+        //     const dispatcher = connection.play(
+        //       ytdl(urls[0], {
+        //         filter: "audioonly",
+        //       })
+        //     );
+        //     dispatcher.on("finish", finish);
+        //   };
+        //   play();
+        // } else {
+        //   connection.play(
+        //     ytdl(url, {
+        //       filter: "audioonly",
+        //     })
+        //   );
+        // }
+        break;
+      case "quiz":
         const connection = await memberVoiceChannel.join();
         const url = args[1];
         if (url.includes("list")) {
           const response = await ytpl(url);
           const items = response.items;
           const urls = items.map((item) => item.url);
+          let index;
           const finish = () => {
-            urls.shift();
+            urls.splice(index, 1);
             play();
           };
           const play = () => {
-            console.log(urls[0]);
+            index = Math.floor(Math.random() * urls.length);
+            console.log(index + " din " + urls.length);
+            //console.log(urls[index]);
             const dispatcher = connection.play(
-              ytdl(urls[0], {
+              ytdl(urls[index], {
                 filter: "audioonly",
               })
             );
@@ -55,11 +87,7 @@ client.on("message", async (message) => {
           };
           play();
         } else {
-          connection.play(
-            ytdl(url, {
-              filter: "audioonly",
-            })
-          );
+          memberTextChannel.send("trebe playlist bo$$");
         }
         break;
     }
