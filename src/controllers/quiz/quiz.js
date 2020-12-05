@@ -24,7 +24,10 @@ export const quiz = async (args, message, songsInfo, prefix) => {
           score: 0,
           passed: false,
         }));
-      const requiredPasses = Math.max(1, Math.floor(competingUsers.length / 2));
+      const requiredPasses = Math.max(
+        1,
+        Math.floor(competingUsers.length / 2) + 1
+      );
 
       let songIndex = 0;
       const playSongInQuiz = async (song, voiceConnection) => {
