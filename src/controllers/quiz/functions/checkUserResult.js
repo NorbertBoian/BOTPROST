@@ -15,7 +15,7 @@ export const checkUserResult = (answers, userAnswer) => {
         stringSimilarity.compareTwoStrings(answer.toLowerCase(), userAnswer) >
         requiredCoeficient
     );
+  if (bothWereGuessed) return "both";
   if (songWasGuessed) return "song";
   if (artistwasGuessed) return "artist";
-  if (bothWereGuessed) return "both";
 };

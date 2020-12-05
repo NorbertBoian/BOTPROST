@@ -85,6 +85,7 @@ export const quiz = async (args, message, songsInfo, prefix) => {
                       shuffledSongsInfo[songIndex].answers,
                       userAnswer.content
                     );
+                    console.log(whatWasGuessed);
                     switch (whatWasGuessed) {
                       case "both":
                         {
