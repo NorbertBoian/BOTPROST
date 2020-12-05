@@ -101,6 +101,7 @@ export const quiz = async (args, message, songsInfo, prefix) => {
                               `<@${rewardedUserID}> guessed both the song and the artist and therefore gets 3 points`
                             );
                             collector.stop("guessed");
+                            userAnswer.react("\u2705");
                           } else if (!artistBeenGuessed) {
                             artistBeenGuessed = rewardedUserID;
                             if (artistBeenGuessed === songBeenGuessed) {
@@ -114,6 +115,7 @@ export const quiz = async (args, message, songsInfo, prefix) => {
                                 `<@${rewardedUserID}> guessed both the song and the artist and therefore gets 2 more points`
                               );
                               collector.stop("guessed");
+                              userAnswer.react("\u2705");
                             } else {
                               competingUsers = updateUser(
                                 competingUsers,
@@ -140,6 +142,7 @@ export const quiz = async (args, message, songsInfo, prefix) => {
                                 `<@${rewardedUserID}> guessed both the song and the artist and therefore gets 2 more points`
                               );
                               collector.stop("guessed");
+                              userAnswer.react("\u2705");
                             } else {
                               competingUsers = updateUser(
                                 competingUsers,
@@ -170,6 +173,7 @@ export const quiz = async (args, message, songsInfo, prefix) => {
                                 `<@${rewardedUserID}> guessed both the song and the artist and therefore gets 2 more points`
                               );
                               collector.stop("guessed");
+                              userAnswer.react("\u2705");
                             } else {
                               competingUsers = updateUser(
                                 competingUsers,
@@ -181,6 +185,7 @@ export const quiz = async (args, message, songsInfo, prefix) => {
                                 `<@${rewardedUserID}> guessed the song and gets 1 point`
                               );
                               if (artistBeenGuessed) collector.stop("guessed");
+                              userAnswer.react("\u2705");
                             }
                           }
                         }
@@ -200,6 +205,7 @@ export const quiz = async (args, message, songsInfo, prefix) => {
                                 `<@${rewardedUserID}> guessed both the song and the artist and therefore gets 2 more points`
                               );
                               collector.stop("guessed");
+                              userAnswer.react("\u2705");
                             } else {
                               competingUsers = updateUser(
                                 competingUsers,
@@ -212,7 +218,13 @@ export const quiz = async (args, message, songsInfo, prefix) => {
                               );
                             }
                             if (songBeenGuessed) collector.stop("guessed");
+                            userAnswer.react("\u2705");
                           }
+                        }
+                        break;
+                      default:
+                        if (userAnswer.content === "!react") {
+                          userAnswer.react("\u274C");
                         }
                         break;
                     }
