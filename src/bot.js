@@ -6,20 +6,25 @@ import { play } from "./controllers/play/play";
 import { quiz } from "./controllers/quiz/quiz";
 import { playlistURL } from "./controllers/quiz/quizExports";
 import { getSongsInfo } from "./controllers/quiz/functions/getSongsInfo";
+import KeyvFile, { makeField } from "keyv-file";
+class Kv extends KeyvFile {
+  constructor() {
+    super({
+      filename: "./db/db.json",
+    });
+  }
+  prefix = makeField(this, "field_key");
+}
+export const kv = new Kv();
 const start = async () => {
   try {
+    let prefix = (await kv.prefix.get()) ? kv.prefix.get() : process.env.PREFIX;
     client.on("message", async (message) => {
       try {
         //  verificam sa nu fie bot si sa fie prefix
-        if (
-          message.author.bot ||
-          !message.content.startsWith(process.env.PREFIX)
-        )
-          return;
+        if (message.author.bot || !message.content.startsWith(prefix)) return;
         // despartim dupa spatiu
-        const args = message.content
-          .slice(process.env.PREFIX.length)
-          .split(" ");
+        const args = message.content.slice(prefix.length).split(" ");
         const memberVoiceChannel = message.member.voice.channel;
         const memberTextChannel = message.channel;
         switch (args[0].toLowerCase()) {
@@ -36,7 +41,33 @@ const start = async () => {
             play(args, message);
             break;
           case "quiz":
-            quiz(args, message, songsInfo);
+            quiz(args, message, songsInfo, prefix);
+            break;
+          case "quizpl":
+            songsInfo = await getSongsInfo(args[1]);
+            await memberTextChannel.send("Playlist has been updated.");
+            break;
+          case "quizmax":
+            {
+              const maxSongs = +args[1];
+              songsInfo = await getSongsInfo(playlistURL, maxSongs);
+              await memberTextChannel.send(
+                "Maximum number of songs in quiz has been updated."
+              );
+            }
+            break;
+          case "setprefix":
+            await kv.prefix.set(args[1]);
+            prefix = args[1];
+            await memberTextChannel.send("Prefix has been set");
+            break;
+          case "prefix":
+            {
+              const currentPrefix = await kv.prefix.get();
+              await memberTextChannel.send(
+                `Current prefix is ${currentPrefix}`
+              );
+            }
             break;
         }
       } catch (error) {

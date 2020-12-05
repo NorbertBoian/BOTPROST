@@ -4,14 +4,17 @@ import { checkUserResult } from "./functions/checkUserResult";
 import { updateUser } from "./functions/updateUser";
 import { getRewardedUserIndex } from "./functions/getRewardedUserIndex";
 import { playSongWithPromise } from "../play/functions/playSongWithPromise";
+import { shuffleArray } from "./functions/shuffleArray";
 dotenv.config();
 
-export const quiz = async (args, message, songsInfo) => {
+export const quiz = async (args, message, songsInfo, prefix) => {
+  const filteredSongsInfo = [...songsInfo].filter((info) => info && info.url);
+  const shuffledSongsInfo = shuffleArray(filteredSongsInfo);
   const memberTextChannel = message.channel;
   const memberVoiceChannel = message.member.voice.channel;
   const connection = await memberVoiceChannel.join();
   try {
-    if (songsInfo) {
+    if (shuffledSongsInfo) {
       await memberTextChannel.send("Game starts soon!");
       let competingUsers = memberVoiceChannel.members
         .filter((memberToFilter) => !memberToFilter.user.bot)
@@ -31,21 +34,13 @@ export const quiz = async (args, message, songsInfo) => {
           let artistBeenGuessed = false;
           let songBeenGuessed = false;
           const dispatcher = await playSongWithPromise(
-            songsInfo[songIndex].url,
+            shuffledSongsInfo[songIndex].url,
             voiceConnection,
             true,
-            songsInfo[songIndex].duration
+            shuffledSongsInfo[songIndex].duration
           );
           dispatcher.on("start", async () => {
-            const filter = (messageToFilter) =>
-              [
-                ...songsInfo[songIndex].answers,
-                `${process.env.PREFIX}pass`,
-                `${process.env.PREFIX}stopquiz`,
-              ].some(
-                (answer) =>
-                  answer.toLowerCase() === messageToFilter.content.toLowerCase()
-              );
+            const filter = (messageToFilter) => !messageToFilter.author.bot;
             try {
               const collector = memberTextChannel.createMessageCollector(
                 filter,
@@ -63,7 +58,7 @@ export const quiz = async (args, message, songsInfo) => {
                   const hasPassedAlready =
                     competingUsers[rewardedUserIndex.passed];
                   if (
-                    userAnswer.content === `${process.env.PREFIX}pass` &&
+                    userAnswer.content === `${prefix}pass` &&
                     !hasPassedAlready
                   ) {
                     competingUsers = updateUser(
@@ -79,13 +74,11 @@ export const quiz = async (args, message, songsInfo) => {
                         `\u23ED\uFE0F ${passed}/${requiredPasses} votes to pass the song.`
                       );
                     }
-                  } else if (
-                    userAnswer.content === `${process.env.PREFIX}stopquiz`
-                  ) {
+                  } else if (userAnswer.content === `${prefix}quizstop`) {
                     collector.stop("stopped");
                   } else {
                     const whatWasGuessed = checkUserResult(
-                      songsInfo[songIndex].answers,
+                      shuffledSongsInfo[songIndex].answers,
                       userAnswer.content
                     );
                     switch (whatWasGuessed) {
@@ -226,7 +219,7 @@ export const quiz = async (args, message, songsInfo) => {
               });
               collector.on("end", async (collected, reason) => {
                 try {
-                  const currentSong = songsInfo[songIndex];
+                  const currentSong = shuffledSongsInfo[songIndex];
                   const currentArtist = currentSong.artistName;
                   const currentSongName = currentSong.name;
                   const currentSongTitle = `${currentArtist} - ${currentSongName}`;
@@ -258,18 +251,21 @@ export const quiz = async (args, message, songsInfo) => {
                     description: `__**LEADERBOARD**__ \n\n ${joinedRankingStrings}`,
                     footer: {
                       text: `Music Quiz - track ${songIndex + 1}/${
-                        songsInfo.length + 1
+                        shuffledSongsInfo.length
                       }`,
                     },
                   };
 
                   await memberTextChannel.send({ embed: reveal });
                   if (
-                    songIndex < songsInfo.length - 1 &&
+                    songIndex < shuffledSongsInfo.length - 1 &&
                     reason !== "stopped"
                   ) {
                     songIndex++;
-                    playSongInQuiz(songsInfo[songIndex].url, connection);
+                    playSongInQuiz(
+                      shuffledSongsInfo[songIndex].url,
+                      connection
+                    );
                   } else {
                     dispatcher.destroy();
                     const finalRanking = {
@@ -292,7 +288,7 @@ export const quiz = async (args, message, songsInfo) => {
           console.log(error);
         }
       };
-      playSongInQuiz(songsInfo[0].url, connection);
+      playSongInQuiz(shuffledSongsInfo[0].url, connection);
     }
   } catch (error) {
     console.log(error);
