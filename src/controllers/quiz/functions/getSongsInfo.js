@@ -6,7 +6,7 @@ import stringSimilarity from "string-similarity";
 const lastfm = new LastFM(process.env.LASTFM_API_KEY, {
   userAgent: "DiscordBot",
 });
-export const getSongsInfo = async (playlistURL, maxSongs = 30) => {
+export const getSongsInfo = async (playlistURL, maxSongs = 300) => {
   try {
     const playlistData = await ytpl(playlistURL, { limit: maxSongs });
     const songsData = playlistData.items;
@@ -36,8 +36,8 @@ export const getSongsInfo = async (playlistURL, maxSongs = 30) => {
                   const chosenResult = artistNames.findIndex((artistName) => {
                     return (
                       stringSimilarity.compareTwoStrings(
-                        artistName,
-                        badArtistName
+                        artistName.toLowerCase(),
+                        badArtistName.toLocaleLowerCase()
                       ) > 0.4
                     );
                   });

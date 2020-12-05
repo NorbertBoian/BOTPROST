@@ -151,6 +151,7 @@ export const prostii = [
   " Final",
   " Winner",
   " Live",
+  " Bonus Track",
   ...eurovisionCountriesAllCases,
 ].join("|");
 

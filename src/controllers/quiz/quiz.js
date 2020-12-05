@@ -10,6 +10,7 @@ dotenv.config();
 export const quiz = async (args, message, songsInfo, prefix) => {
   const filteredSongsInfo = [...songsInfo].filter((info) => info && info.url);
   const shuffledSongsInfo = shuffleArray(filteredSongsInfo);
+  console.log(shuffledSongsInfo, songsInfo);
   const memberTextChannel = message.channel;
   const memberVoiceChannel = message.member.voice.channel;
   const connection = await memberVoiceChannel.join();
@@ -24,7 +25,10 @@ export const quiz = async (args, message, songsInfo, prefix) => {
           score: 0,
           passed: false,
         }));
-      const requiredPasses = Math.max(1, Math.floor(competingUsers.length / 2));
+      const requiredPasses = Math.max(
+        1,
+        Math.floor(competingUsers.length / 2) + 1
+      );
 
       let songIndex = 0;
       const playSongInQuiz = async (song, voiceConnection) => {
@@ -224,7 +228,7 @@ export const quiz = async (args, message, songsInfo, prefix) => {
                   const currentSongName = currentSong.name;
                   const currentSongTitle = `${currentArtist} - ${currentSongName}`;
                   const currentSongThumbnail = currentSong.thumbnail;
-                  const compareFunction = (a, b) => a.score - b.score;
+                  const compareFunction = (a, b) => b.score - a.score;
                   const usersOrderedByScore = competingUsers.sort(
                     compareFunction
                   );

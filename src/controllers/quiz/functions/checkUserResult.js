@@ -12,7 +12,7 @@ export const checkUserResult = (answers, userAnswer) => {
     .slice(-2)
     .some(
       (answer) =>
-        stringSimilarity.compareTwoStrings(answer, userAnswer) >
+        stringSimilarity.compareTwoStrings(answer.toLowerCase(), userAnswer) >
         requiredCoeficient
     );
   if (songWasGuessed) return "song";
