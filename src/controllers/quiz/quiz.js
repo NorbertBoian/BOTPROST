@@ -10,7 +10,7 @@ dotenv.config();
 export const quiz = async (args, message, songsInfo, prefix) => {
   const filteredSongsInfo = [...songsInfo].filter((info) => info && info.url);
   const shuffledSongsInfo = shuffleArray(filteredSongsInfo);
-  console.log(shuffledSongsInfo, songsInfo);
+  // console.log(shuffledSongsInfo, songsInfo);
   const memberTextChannel = message.channel;
   const memberVoiceChannel = message.member.voice.channel;
   const connection = await memberVoiceChannel.join();
