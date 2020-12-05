@@ -227,7 +227,7 @@ export const quiz = async (args, message, songsInfo, prefix) => {
                   const currentSongName = currentSong.name;
                   const currentSongTitle = `${currentArtist} - ${currentSongName}`;
                   const currentSongThumbnail = currentSong.thumbnail;
-                  const compareFunction = (a, b) => a.score - b.score;
+                  const compareFunction = (a, b) => b.score - a.score;
                   const usersOrderedByScore = competingUsers.sort(
                     compareFunction
                   );
