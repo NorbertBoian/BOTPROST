@@ -1,21 +1,24 @@
 import dotenv from "dotenv";
-import { defaultThumbnail } from "./quizExports";
 import { checkUserResult } from "./functions/checkUserResult";
 import { updateUser } from "./functions/updateUser";
 import { getRewardedUserIndex } from "./functions/getRewardedUserIndex";
 import { playSongWithPromise } from "../play/functions/playSongWithPromise";
 import { shuffleArray } from "./functions/shuffleArray";
+import { getRevealEmbedObject } from "./functions/getRevealEmbedObject";
+import { getFinalRankingEmbedObject } from "./functions/getFinalRankingEmbedObject";
 dotenv.config();
 
 export const quiz = async (args, message, songsInfo, prefix) => {
   const filteredSongsInfo = [...songsInfo].filter((info) => info && info.url);
   const shuffledSongsInfo = shuffleArray(filteredSongsInfo);
+  console.log(songsInfo.length, filteredSongsInfo.length);
+  if (filteredSongsInfo.length === 0) console.log(songsInfo.splice(0, 12));
   //console.log(shuffledSongsInfo, songsInfo);
   const memberTextChannel = message.channel;
   const memberVoiceChannel = message.member.voice.channel;
   const connection = await memberVoiceChannel.join();
   try {
-    if (shuffledSongsInfo) {
+    if (shuffledSongsInfo.length) {
       await memberTextChannel.send("Game starts soon!");
       let competingUsers = memberVoiceChannel.members
         .filter((memberToFilter) => !memberToFilter.user.bot)
@@ -29,11 +32,9 @@ export const quiz = async (args, message, songsInfo, prefix) => {
         1,
         Math.floor(competingUsers.length / 2) + 1
       );
-
       let songIndex = 0;
       const playSongInQuiz = async (song, voiceConnection) => {
         try {
-          if (dispatcher) dispatcher.destroy();
           let passed = 0;
           let artistBeenGuessed = false;
           let songBeenGuessed = false;
@@ -43,6 +44,22 @@ export const quiz = async (args, message, songsInfo, prefix) => {
             true,
             shuffledSongsInfo[songIndex].duration
           );
+          dispatcher.on("error", async () => {
+            const reveal = getRevealEmbedObject(
+              shuffledSongsInfo,
+              songIndex,
+              competingUsers
+            );
+            await memberTextChannel.send({ embed: reveal });
+            if (songIndex !== shuffledSongsInfo.length - 1) {
+              songIndex++;
+              playSongInQuiz(shuffledSongsInfo[songIndex].url, connection);
+            } else {
+              dispatcher.destroy();
+              const finalRanking = getFinalRankingEmbedObject(competingUsers);
+              await memberTextChannel.send({ embed: finalRanking });
+            }
+          });
           dispatcher.on("start", async () => {
             const filter = (messageToFilter) => !messageToFilter.author.bot;
             try {
@@ -85,7 +102,7 @@ export const quiz = async (args, message, songsInfo, prefix) => {
                       shuffledSongsInfo[songIndex].answers,
                       userAnswer.content
                     );
-                    console.log(whatWasGuessed);
+                    // console.log(whatWasGuessed);
                     switch (whatWasGuessed) {
                       case "both":
                         {
@@ -234,43 +251,11 @@ export const quiz = async (args, message, songsInfo, prefix) => {
               });
               collector.on("end", async (collected, reason) => {
                 try {
-                  const currentSong = shuffledSongsInfo[songIndex];
-                  const currentArtist = currentSong.artistName;
-                  const currentSongName = currentSong.name;
-                  const currentSongTitle = `${currentArtist} - ${currentSongName}`;
-                  const currentSongThumbnail = currentSong.thumbnail;
-                  const compareFunction = (a, b) => b.score - a.score;
-                  const usersOrderedByScore = competingUsers.sort(
-                    compareFunction
+                  const reveal = getRevealEmbedObject(
+                    shuffledSongsInfo,
+                    songIndex,
+                    competingUsers
                   );
-                  const medals = [
-                    "\uD83E\uDD47",
-                    "\uD83E\uDD48",
-                    "\uD83E\uDD49",
-                  ];
-                  const rankingStrings = usersOrderedByScore.map(
-                    (user, index) =>
-                      `${index < 3 ? medals[index] : `${index + 1}.`} <@${
-                        user.id
-                      }> - ${user.score} ${user.score === 1 ? "pt" : "pts"}`
-                  );
-                  const joinedRankingStrings = rankingStrings.join("\n\n");
-                  const reveal = {
-                    color: 0x0099ff,
-                    title: `It was: ${currentSongTitle}`,
-                    thumbnail: {
-                      url: currentSongThumbnail
-                        ? currentSongThumbnail
-                        : defaultThumbnail,
-                    },
-                    description: `__**LEADERBOARD**__ \n\n ${joinedRankingStrings}`,
-                    footer: {
-                      text: `Music Quiz - track ${songIndex + 1}/${
-                        shuffledSongsInfo.length
-                      }`,
-                    },
-                  };
-
                   await memberTextChannel.send({ embed: reveal });
                   if (
                     songIndex < shuffledSongsInfo.length - 1 &&
@@ -283,12 +268,9 @@ export const quiz = async (args, message, songsInfo, prefix) => {
                     );
                   } else {
                     dispatcher.destroy();
-                    const finalRanking = {
-                      color: 0x0099ff,
-                      title: "Music Quiz Ranking",
-
-                      description: `__**LEADERBOARD**__ \n\n ${joinedRankingStrings}`,
-                    };
+                    const finalRanking = getFinalRankingEmbedObject(
+                      competingUsers
+                    );
                     await memberTextChannel.send({ embed: finalRanking });
                   }
                 } catch (error) {
@@ -303,6 +285,7 @@ export const quiz = async (args, message, songsInfo, prefix) => {
           console.log(error);
         }
       };
+      // console.log(shuffledSongsInfo);
       playSongInQuiz(shuffledSongsInfo[0].url, connection);
     }
   } catch (error) {

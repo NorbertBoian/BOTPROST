@@ -18,6 +18,7 @@ class Kv extends KeyvFile {
 export const kv = new Kv();
 const start = async () => {
   try {
+    let maxSongs = 30;
     let prefix = (await kv.prefix.get()) ? kv.prefix.get() : process.env.PREFIX;
     client.on("message", async (message) => {
       try {
@@ -44,12 +45,14 @@ const start = async () => {
             quiz(args, message, songsInfo, prefix);
             break;
           case "quizpl":
-            songsInfo = await getSongsInfo(args[1]);
-            await memberTextChannel.send("Playlist has been updated.");
+            songsInfo = await getSongsInfo(args[1], maxSongs);
+            if (songsInfo)
+              await memberTextChannel.send("Playlist has been updated.");
+            else await memberTextChannel.send("Invalid URL.");
             break;
           case "quizmax":
             {
-              const maxSongs = +args[1];
+              maxSongs = +args[1];
               songsInfo = await getSongsInfo(playlistURL, maxSongs);
               await memberTextChannel.send(
                 "Maximum number of songs in quiz has been updated."

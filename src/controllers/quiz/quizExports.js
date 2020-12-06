@@ -92,7 +92,10 @@ export const prostii = [
   "VIDEO",
   "lyrics",
   "lyric",
+  "Lyric",
+  "LYRIC",
   "video",
+  "Video",
   "audio",
   "manele",
   "vechi",
@@ -153,6 +156,12 @@ export const prostii = [
   " Live",
   " Bonus Track",
   "VEVO",
+  "TEASER",
+  "teaser",
+  "Teaser",
+  "Radio Edit",
+  "RADIO EDIT",
+  "Radio edit",
   ...eurovisionCountriesAllCases,
 ].join("|");
 

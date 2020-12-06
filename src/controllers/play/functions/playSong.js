@@ -1,4 +1,4 @@
-const ytdl = require("discord-ytdl-core");
+import ytdl from "discord-ytdl-core";
 export const playSong = (
   url,
   connection,
@@ -26,6 +26,9 @@ export const playSong = (
       }),
       { type: "opus" }
     );
+    dispatcher.on("error", (error) => {
+      console.log(error, url);
+    });
     return dispatcher;
   } catch (error) {
     return error;
