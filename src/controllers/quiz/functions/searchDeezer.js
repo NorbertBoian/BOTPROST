@@ -1,9 +1,7 @@
-import getArtistTitle from "get-artist-title";
 import { cleanUpTitle } from "./cleanUpTitle";
 import stringSimilarity from "string-similarity";
 import DeezerPublicApi from "deezer-public-api";
-import { getBadTitle } from "./getBadTitle";
-import { getFeaturedArtistsFromTitle } from "./getFeaturedArtistsFromTitle";
+import { getSongAndArtistsFromTitle } from "./getSongAndArtistsFromTitle";
 const deezer = new DeezerPublicApi();
 
 export const searchDeezer = async ({
@@ -12,32 +10,36 @@ export const searchDeezer = async ({
   songTitles,
   songChannels,
 }) => {
-  getFeaturedArtistsFromTitle("artistName", "name");
-  return;
   // console.log(await deezer.infos());
+
   const deezerPromises = songTitles.map(async (title, i) => {
-    const [badArtistName, badName] = getBadTitle(title, songChannels[i]);
-    const query = `${badArtistName} ${badName}`;
-    const searchResult = await deezer.search.track(query, "RANKING", 200);
+    const [initialArtistsNames, initialSongName] = getSongAndArtistsFromTitle(
+      title,
+      songChannels[i]
+    );
+    const deezerQuery = `${initialArtistsNames.join("")} ${initialSongName}`;
+    const searchResult = await deezer.search.track(deezerQuery, "RANKING", 200);
     const searchResultData = searchResult.data;
-    const artistNames = searchResultData.map(
+    const foundArtistsNames = searchResultData.map(
       (songData) => songData.artist.name
     );
-    const artistSimilarEnoughFfilter = (artistName) => {
-      return (
+    const chooseResultFilter = (foundArtist) => {
+      const artistSimilarEnoughFfilter = (artistName) =>
         stringSimilarity.compareTwoStrings(
           artistName.toLowerCase(),
-          badArtistName.toLowerCase()
-        ) > 0.6
-      );
+          foundArtist.toLowerCase()
+        ) > 0.6;
+      return initialArtistsNames.some(artistSimilarEnoughFfilter);
     };
     // .some from array of artists from badartist
-    const chosenResultIndex = artistNames.findIndex(artistSimilarEnoughFfilter);
+    const chosenResultIndex = foundArtistsNames.findIndex(chooseResultFilter);
 
     if (chosenResultIndex < 0) return "No result";
     else {
-      const name = searchResultData.result[chosenResultIndex].title_short;
-      const artistName = searchResultData.result[chosenResultIndex].artist.name;
+      const deezerArtistName =
+        searchResultData.result[chosenResultIndex].artist.name;
+      const deezerSongName =
+        searchResultData.result[chosenResultIndex].title_short;
       const albumArtwork =
         searchResultData.result[chosenResultIndex].album.cover_medium;
       const trackId = searchResultData.result[chosenResultIndex].id;
@@ -46,13 +48,23 @@ export const searchDeezer = async ({
       const isFeaturedArtist = (contributor) =>
         contributor.type === "artist" && contributor.role !== "Main";
       const featuredArtistsData = trackContributors.filter(isFeaturedArtist);
-      const featuredArtistsNamesLastFM = featuredArtistsData.map(
+      const featuredArtistsNames = featuredArtistsData.map(
         (featuredArtistData) => featuredArtistsData.name
       );
-      const featuredArtistsNames = featuredArtistsNamesLastFM.length
-        ? featuredArtistsNamesLastFM
-        : getFeaturedArtistsFromTitle(artistName, name);
-      const cleanName = cleanUpTitle(name);
+      const deezerArtistNames = [deezerArtistName, ...featuredArtistsNames];
+      // let [artistsNames, songName] = [deezerArtistNames, deezerSongName];
+      // if (!featuredArtistsData.length) {
+      const [artistsNames, songName] = getSongAndArtistsFromTitle(
+        `${deezerArtistName} - ${deezerSongName}`
+      );
+      // }
+      // const featuredArtistsNamesLastFM = featuredArtistsData.map(
+      //   (featuredArtistData) => featuredArtistsData.name
+      // );
+      // const featuredArtistsNames = featuredArtistsNamesLastFM.length
+      //   ? featuredArtistsNamesLastFM
+      //   : getFeaturedArtistsFromTitle(artistName, name);
+      // const cleanName = cleanUpTitle(name);
 
       const songInfo = {
         name,
