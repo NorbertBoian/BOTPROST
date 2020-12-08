@@ -1,8 +1,14 @@
 {
-  "extends": ["eslint:recommended", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:jest/recommended",
+    "plugin:jest/style",
+    "prettier"
+  ],
   "env": {
     "node": true,
-    "es6": true
+    "es6": true,
+    "jest/globals": true
   },
   "parser": "babel-eslint",
   "parserOptions": {
@@ -26,8 +32,9 @@
     "no-var": "error",
     "object-curly-spacing": ["error", "always"],
     "prefer-const": "error",
-    "quotes": ["error", "double"],
+    // "quotes": ["warn", "double"],
     "semi": ["warn", "always"],
     "yoda": "error"
-  }
+  },
+  "plugins": ["jest"]
 }

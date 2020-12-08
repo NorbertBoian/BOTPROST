@@ -5,9 +5,9 @@ export const getSongsInfo = async (playlistURL, maxSongs = 30) => {
   try {
     if (playlistURL) {
       const playListData = await getPlaylistData(playlistURL, maxSongs);
-      const songsInfo = await searchLastFM(playListData);
+      // const songsInfo = await searchLastFM(playListData);
       await searchDeezer(playListData);
-      return songsInfo;
+      // return songsInfo;
     } else return false;
   } catch (error) {
     console.log(error);

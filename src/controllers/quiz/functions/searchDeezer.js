@@ -3,6 +3,7 @@ import { cleanUpTitle } from "./cleanUpTitle";
 import stringSimilarity from "string-similarity";
 import DeezerPublicApi from "deezer-public-api";
 import { getBadTitle } from "./getBadTitle";
+import { getFeaturedArtistsFromTitle } from "./getFeaturedArtistsFromTitle";
 const deezer = new DeezerPublicApi();
 
 export const searchDeezer = async ({
@@ -11,6 +12,8 @@ export const searchDeezer = async ({
   songTitles,
   songChannels,
 }) => {
+  getFeaturedArtistsFromTitle("artistName", "name");
+  return;
   // console.log(await deezer.infos());
   const deezerPromises = songTitles.map(async (title, i) => {
     const [badArtistName, badName] = getBadTitle(title, songChannels[i]);
@@ -28,6 +31,7 @@ export const searchDeezer = async ({
         ) > 0.6
       );
     };
+    // .some from array of artists from badartist
     const chosenResultIndex = artistNames.findIndex(artistSimilarEnoughFfilter);
 
     if (chosenResultIndex < 0) return "No result";
@@ -36,19 +40,25 @@ export const searchDeezer = async ({
       const artistName = searchResultData.result[chosenResultIndex].artist.name;
       const albumArtwork =
         searchResultData.result[chosenResultIndex].album.cover_medium;
-      deezer.track();
-
+      const trackId = searchResultData.result[chosenResultIndex].id;
+      const trackInfo = await deezer.track(trackId);
+      const trackContributors = trackInfo.contributors;
+      const isFeaturedArtist = (contributor) =>
+        contributor.type === "artist" && contributor.role !== "Main";
+      const featuredArtistsData = trackContributors.filter(isFeaturedArtist);
+      const featuredArtistsNamesLastFM = featuredArtistsData.map(
+        (featuredArtistData) => featuredArtistsData.name
+      );
+      const featuredArtistsNames = featuredArtistsNamesLastFM.length
+        ? featuredArtistsNamesLastFM
+        : getFeaturedArtistsFromTitle(artistName, name);
       const cleanName = cleanUpTitle(name);
+
       const songInfo = {
         name,
         artistName,
+        featuredArtistsNames,
         url: songURLs[i],
-        answers: [
-          name,
-          artistName,
-          `${name} ${artistName}`,
-          `${artistName} ${name}`,
-        ],
         thumbnail: albumArtwork,
         duration: songsDuration[i],
       };
