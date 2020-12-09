@@ -73,6 +73,13 @@ describe("getFeaturedArtist", () => {
     const output = [["JKKL", "corcodan"], "Fire"];
     expect(getSongAndArtistsFromTitle(...input)).toEqual(output);
   });
+  test("Same artists in both song and artist and some more", () => {
+    const input = [
+      "JKKL X mArus X Pegasus - Feat 6ft FEATURING feat.Mike & mArus",
+    ];
+    const output = [["JKKL", "mArus", "Pegasus", "Mike"], "Feat 6ft"];
+    expect(getSongAndArtistsFromTitle(...input)).toEqual(output);
+  });
   test("Feat. at the beggining", () => {
     const input = ["Feat - Feat. Jean de la Cracovia (Douazeci)"];
     const output = [["Feat", "Jean de la Cracovia"], ""];
@@ -94,8 +101,8 @@ describe("getFeaturedArtist", () => {
     expect(getSongAndArtistsFromTitle(...input)).toEqual(output);
   });
   test("Featuring in artistName and in parenthesis", () => {
-    const input = ["Marius (Featuring Moga) - Sunt prea nebun"];
-    const output = [["Marius", "Moga"], "Sunt prea nebun"];
+    const input = ["mArus (Featuring Moga) - Sunt prea nebun"];
+    const output = [["mArus", "Moga"], "Sunt prea nebun"];
     expect(getSongAndArtistsFromTitle(...input)).toEqual(output);
   });
   test("ft in song name", () => {

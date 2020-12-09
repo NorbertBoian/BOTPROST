@@ -1,18 +1,15 @@
-import { cleanUpTitle } from "./cleanUpTitle";
 import stringSimilarity from "string-similarity";
 import DeezerPublicApi from "deezer-public-api";
 import { getSongAndArtistsFromTitle } from "./getSongAndArtistsFromTitle";
 const deezer = new DeezerPublicApi();
 
-export const searchDeezer = async ({
+export const searchDeezer = ({
   songsDuration,
   songURLs,
   songTitles,
   songChannels,
 }) => {
-  // console.log(await deezer.infos());
-
-  const deezerPromises = songTitles.map(async (title, i) => {
+  const deezerGetSongInfoFunctions = songTitles.map((title, i) => async () => {
     const [initialArtistsNames, initialSongName] = getSongAndArtistsFromTitle(
       title,
       songChannels[i]
@@ -49,76 +46,21 @@ export const searchDeezer = async ({
         contributor.type === "artist" && contributor.role !== "Main";
       const featuredArtistsData = trackContributors.filter(isFeaturedArtist);
       const featuredArtistsNames = featuredArtistsData.map(
-        (featuredArtistData) => featuredArtistsData.name
+        (featuredArtistData) => featuredArtistData.name
       );
       const deezerArtistNames = [deezerArtistName, ...featuredArtistsNames];
-      // let [artistsNames, songName] = [deezerArtistNames, deezerSongName];
-      // if (!featuredArtistsData.length) {
       const [artistsNames, songName] = getSongAndArtistsFromTitle(
-        `${deezerArtistName} - ${deezerSongName}`
+        `${deezerArtistNames} - ${deezerSongName}`
       );
-      // }
-      // const featuredArtistsNamesLastFM = featuredArtistsData.map(
-      //   (featuredArtistData) => featuredArtistsData.name
-      // );
-      // const featuredArtistsNames = featuredArtistsNamesLastFM.length
-      //   ? featuredArtistsNamesLastFM
-      //   : getFeaturedArtistsFromTitle(artistName, name);
-      // const cleanName = cleanUpTitle(name);
-
       const songInfo = {
-        name,
-        artistName,
-        featuredArtistsNames,
+        songName,
+        artistsNames,
         url: songURLs[i],
         thumbnail: albumArtwork,
         duration: songsDuration[i],
       };
+      return songInfo;
     }
   });
+  return deezerGetSongInfoFunctions;
 };
-//
-//             else {
-//               const { name, artistName } =
-//                 badArtistName !== "Jamala"
-//                   ? data.result[chosenResult]
-//                   : { name: "1947", artistName: "Jamala" };
-//               lastfm.trackInfo({ name, artistName }, (err, infoResult) => {
-//                 if (err) {
-//                   if (i === 2) console.log(err, name, artistName);
-//                   reject("The API returned an error.info");
-//                 } else {
-//                   const cleanName = cleanUpTitle(name).replace(
-//                     /(Ft\.).*|(Featuring\.).*|(ft\.).*|(featuring\.).*|(feat\.).*|(Feat\.).*/g,
-//                     ""
-//                   );
-//                   const albumArtwork = infoResult.images
-//                     ? infoResult.images[infoResult.images.length - 1]
-//                     : undefined;
-//                   const songInfo = {
-//                     name: cleanName,
-//                     artistName,
-//                     url: songURLs[i],
-//                     answers: [
-//                       cleanName,
-//                       artistName,
-//                       `${cleanName} ${artistName}`,
-//                       `${artistName} ${cleanName}`,
-//                     ],
-//                     thumbnail: albumArtwork,
-//                     duration: songsDuration[i],
-//                   };
-//                   resolve(songInfo);
-//                 }
-//               });
-//             }
-//           }
-//         }
-//       });
-//     }
-// ;
-// const LastFmResults = await Promise.all(
-//   LastFmPromises.map((promise) => promise.catch((error) => error))
-// );
-// const songsInfo = LastFmResults.filter((result) => result);
-// return songsInfo;

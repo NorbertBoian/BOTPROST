@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest --watch",
     "start": "nodemon --ignore db/ --exec babel-node ./src/bot.js",
+    "testFunction": "nodemon --ignore db/ --exec babel-node ./src/controllers/quiz/functions/testFunction.js",
     "log": "nodemon --ignore db/ --exec babel-node ./src/bot.js > .log-file.txt"
   },
   "repository": {

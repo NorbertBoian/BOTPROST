@@ -1,0 +1,11 @@
+[33m[nodemon] 2.0.6[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `babel-node ./src/bot.js`[39m
+TypeError: Cannot read property 'map' of undefined
+    at searchDeezer (E:\WebDev\stoica\discord-bot-musica\src\controllers\quiz\functions\/searchDeezer.js:15:37)
+    at getSongsInfo (E:\WebDev\stoica\discord-bot-musica\src\controllers\quiz\functions\/getSongsInfo.js:9:13)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+    at start (E:\WebDev\stoica\discord-bot-musica\src\/bot.js:82:21)
+Running

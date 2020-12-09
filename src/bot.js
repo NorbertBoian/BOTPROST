@@ -4,7 +4,7 @@ const client = new Discord.Client();
 dotenv.config();
 import { play } from "./controllers/play/play";
 import { quiz } from "./controllers/quiz/quiz";
-import { playlistURL } from "./controllers/quiz/quizExports";
+import { defaultPlaylistURL } from "./controllers/quiz/quizExports";
 import { getSongsInfo } from "./controllers/quiz/functions/getSongsInfo";
 import KeyvFile, { makeField } from "keyv-file";
 class Kv extends KeyvFile {
@@ -42,18 +42,17 @@ const start = async () => {
             play(args, message);
             break;
           case "quiz":
-            quiz(args, message, songsInfo, prefix);
+            quiz(args, message, playlistURL, maxSongs, prefix);
             break;
           case "quizpl":
-            songsInfo = await getSongsInfo(args[1], maxSongs);
-            if (songsInfo)
+            if (args[1]) {
+              playlistURL = args[1];
               await memberTextChannel.send("Playlist has been updated.");
-            else await memberTextChannel.send("Invalid URL.");
+            } else await memberTextChannel.send("Invalid URL.");
             break;
           case "quizmax":
             {
               maxSongs = +args[1];
-              songsInfo = await getSongsInfo(playlistURL, maxSongs);
               await memberTextChannel.send(
                 "Maximum number of songs in quiz has been updated."
               );
@@ -77,9 +76,8 @@ const start = async () => {
         console.error(error);
       }
     });
-
+    let playlistURL = defaultPlaylistURL;
     await client.login(process.env.TOKEN);
-    let songsInfo = await getSongsInfo(playlistURL);
     // console.log(songsInfo);
     console.log("Running");
   } catch (error) {

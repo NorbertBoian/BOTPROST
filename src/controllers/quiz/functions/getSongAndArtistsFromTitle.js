@@ -1,3 +1,4 @@
+import { split } from "ffmpeg-static";
 import { cleanUpTitle } from "./cleanUpTitle";
 
 export const getSongAndArtistsFromTitle = (title, channel = "") => {
@@ -26,7 +27,10 @@ export const getSongAndArtistsFromTitle = (title, channel = "") => {
     "FEAT",
   ].join("|");
   const featuredThatRequireDot = ["feat", "Feat", "ft"].join("|");
-  const replaceRegEx = `^FEAT[^\\.]*.$|.*(?:${featuredThatDoNotRequireDot})(?:\\.|[^\\S\\r\\n])|.*(?:${featuredThatRequireDot})\\.|[\\](?:\\[)].*$|^.*`;
+  const replaceRegEx = RegExp(
+    `^FEAT[^\\.]*.$|.*(?:${featuredThatDoNotRequireDot})(?:\\.|[^\\S\\r\\n])|.*(?:${featuredThatRequireDot})\\.|[\\](?:\\[)].*$|^.*`,
+    "g"
+  );
   const matchAllEmojis =
     "(?:\\u00a9|\\u00ae|[\\u2000-\\u3300]|\\ud83c[\\ud000-\\udfff]|\\ud83d[\\ud000-\\udfff]|\\ud83e[\\ud000-\\udfff])";
   const artistsSeparatorsOnlyFirstCap = ["&", " and ", ",", " x ", " si "];
@@ -42,34 +46,31 @@ export const getSongAndArtistsFromTitle = (title, channel = "") => {
     ...artistsSeparatorsLowerCase,
   ].join("|");
   const splitRegEx = RegExp(
-    `[^(?:[\\n](?:${featuredThatDoNotRequireDot})(?:\\.|[^\\S\\r\\n])|(?:${featuredThatRequireDot})\\.|${matchAllEmojis}|${artistsSeparators}`,
+    `(?:${featuredThatDoNotRequireDot})(?:\\.|[^\\S\\r\\n])|(?:${featuredThatRequireDot})\\.|${matchAllEmojis}|${artistsSeparators}`,
     "g"
   );
-  const replaceArtistsFromSongTitleRegEx = `^(?=FEAT)|\\([^)]*\\)|\\[[^\\]]*\\]|(?:(?:${featuredThatRequireDot})\\.|(?:${featuredThatDoNotRequireDot})(?:[^\\S\\r\\n]|\\.)).*`;
-  // const removeParensIncludingFeaturingRegEx = RegExp(
-  //   `\\[[^\\]]*(?:${featuredAllCases})(?:[^\\S\\r\\n]|\\.)|(?<=(?:${featuredAllCases})(?:[^\\S\\r\\n]|\\.)[^\\]]*)\\]|\\([^)]*(?:${featuredAllCases})(?:[^\\S\\r\\n]|\\.)|(?<=(?:${featuredAllCases})(?:[^\\S\\r\\n]|\\.)[^)]*)\\)|\\([^\\)]*\\)|\\[[^[]*\\]`,
-  //   "g"
-  // );
-  const removeParensRegEx = `\\((?=(?:${featuredAllCases})([^\\\\S\\\\r\\\\n]|\\.)[^)]*)|\\)|\\[(?=(?:${featuredAllCases})([^\\\\S\\\\r\\\\n]|\\.)[^]]*)|\\]|\\([^)]*\\)|\\[[^\\]]*\\]`;
-  const thingsThatFollowFeatured = name.replace(RegExp(replaceRegEx, "g"), "");
+  const replaceArtistsFromSongTitleRegEx = RegExp(
+    `^(?=FEAT)|\\([^)]*\\)|\\[[^\\]]*\\]|(?:(?:${featuredThatRequireDot})\\.|(?:${featuredThatDoNotRequireDot})(?:[^\\S\\r\\n]|\\.)).*`,
+    "g"
+  );
+  const removeParensRegEx = RegExp(
+    `\\((?=(?:${featuredAllCases})(?:[^\\\\S\\\\r\\\\n]|\\.)[^)]*)|\\)|\\[(?=(?:${featuredAllCases})(?:[^\\\\S\\\\r\\\\n]|\\.)[^]]*)|\\]|\\([^)]*\\)|\\[[^\\]]*\\]`,
+    "g"
+  );
+  // console.log(removeParensRegEx);
+  const thingsThatFollowFeatured = name.replace(replaceRegEx, "");
   const nameWithoutFeaturedArtistsAndParens = name.replace(
-    RegExp(replaceArtistsFromSongTitleRegEx, "g"),
+    replaceArtistsFromSongTitleRegEx,
     ""
   );
   const cleanedName = cleanUpTitle(nameWithoutFeaturedArtistsAndParens);
   const featuredArtists = [
-    artistName,
-    ...thingsThatFollowFeatured.split(splitRegEx),
-  ]
-    .map((artist) => (artist ? artist.trim() : artist))
-    .filter((artist) => artist);
-  if (!thingsThatFollowFeatured.length) {
-    const allArtists = [
-      ...artistName.replace(removeParensRegEx, "").split(splitRegEx),
-    ]
-      .map((artist) => (artist ? artist.trim() : artist))
-      .filter((artist) => artist);
-    return [allArtists, cleanedName];
-  }
+    ...new Set(
+      [
+        ...artistName.replace(removeParensRegEx, "").split(splitRegEx),
+        ...thingsThatFollowFeatured.split(splitRegEx),
+      ].map((artist) => (artist ? artist.trim() : artist))
+    ),
+  ].filter((artist) => artist);
   return [featuredArtists, cleanedName];
 };

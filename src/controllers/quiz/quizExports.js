@@ -1,4 +1,4 @@
-export const playlistURL =
+export const defaultPlaylistURL =
   "https://www.youtube.com/playlist?list=PL15B1E77BB5708555";
 export const defaultThumbnail =
   "https://millennialdiyer.com/wp1/wp-content/uploads/2018/11/Tips-Tricks-for-Assigning-Album-Cover-Art-to-your-Music-Library-Default-Image.jpg";
