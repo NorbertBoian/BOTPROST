@@ -60,7 +60,7 @@ export const searchDeezer = (playListData) => {
           const [artistsNames, songName] = getSongAndArtistsFromTitle(
             `${deezerArtistNames} - ${deezerSongName}`
           );
-          console.log(artistsNames.join(" "), songName);
+          // console.log(artistsNames.join(" "), songName);
           const songInfo = {
             songName: songName,
             artistsNames,
@@ -96,7 +96,7 @@ export const searchDeezer = (playListData) => {
             const [artistsNames, songName] = getSongAndArtistsFromTitle(
               `${lastFmArtistName} - ${lastFmSongName}`
             );
-            console.log(artistsNames.join(" "), songName);
+            // console.log(artistsNames.join(" "), songName);
             const songInfo = {
               songName: songName,
               artistsNames,
