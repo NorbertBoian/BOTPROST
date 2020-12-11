@@ -1,9 +1,9 @@
 import LastFM from "last-fm";
-const lastfm = new LastFM(process.env.LASTFM_API_KEY, {
-  userAgent: "DiscordBot",
-});
-export const lastFmWithPromise = (method = "trackSearch", paramsObject) =>
+export const lastFmWithPromise = (method, paramsObject) =>
   new Promise((resolve, reject) => {
+    const lastfm = new LastFM(process.env.LASTFM_API_KEY, {
+      userAgent: "DiscordBot",
+    });
     lastfm[method](paramsObject, (err, data) => {
       if (err) reject(err);
       else {

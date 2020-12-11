@@ -1,11 +1,11 @@
-import { split } from "ffmpeg-static";
-import { cleanUpTitle } from "./cleanUpTitle";
+import { cleanUpString, cleanUpTitle } from "./cleanUpTitle";
 
 export const getSongAndArtistsFromTitle = (title, channel = "") => {
   const cleanedChannel = cleanUpTitle(channel);
+  const cleanedTitle = cleanUpString(title);
   const [artistName, name] = [
     cleanedChannel,
-    ...title.split(" - ").slice(0, 2),
+    ...cleanedTitle.split(" - ").slice(0, 2),
   ].slice(-2);
   const featuredOnlyFirstCap = ["Featuring", "Feat", "Ft"];
   const featuredUppercase = featuredOnlyFirstCap.map((string) =>
@@ -72,5 +72,7 @@ export const getSongAndArtistsFromTitle = (title, channel = "") => {
       ].map((artist) => (artist ? artist.trim() : artist))
     ),
   ].filter((artist) => artist);
-  return [featuredArtists, cleanedName];
+  // console.log(cleanedTitle);
+  // console.log(featuredArtists, cleanedName);
+  return [featuredArtists, cleanedName.replace(/[()\\[\\]] ?$/g, "")];
 };

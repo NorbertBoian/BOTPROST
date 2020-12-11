@@ -1,8 +1,11 @@
 import ytpl from "ytpl";
 import ytdl from "discord-ytdl-core";
+import { shuffleArray } from "./shuffleArray";
 export const getPlaylistData = async (playlistURL, maxSongs = 30) => {
-  const playlistData = await ytpl(playlistURL, { limit: maxSongs });
-  const songsData = playlistData.items;
+  const playlistData = await ytpl(playlistURL, { limit: Infinity });
+  const unshuffledSongsData = playlistData.items;
+  const shuffledSongsData = shuffleArray(unshuffledSongsData);
+  const songsData = shuffledSongsData.slice(0, maxSongs);
   const songsMeta = await Promise.all(
     songsData.map((songData) => ytdl.getInfo(songData.url))
   );
@@ -15,10 +18,10 @@ export const getPlaylistData = async (playlistURL, maxSongs = 30) => {
   };
   const playableSongsData = songsData.filter(isPlayableFilter);
   const playlistDataObject = playableSongsData.map((item) => ({
-    songsDuration: item.duration,
-    songURLs: item.url,
-    songTitles: item.title,
-    songChannels: item.author.name,
+    songDuration: item.duration,
+    songURL: item.url,
+    songTitle: item.title,
+    songChannel: item.author.name,
   }));
 
   return playlistDataObject;

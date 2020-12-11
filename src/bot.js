@@ -5,7 +5,6 @@ dotenv.config();
 import { play } from "./controllers/play/play";
 import { quiz } from "./controllers/quiz/quiz";
 import { defaultPlaylistURL } from "./controllers/quiz/quizExports";
-import { getSongsInfo } from "./controllers/quiz/functions/getSongsInfo";
 import KeyvFile, { makeField } from "keyv-file";
 class Kv extends KeyvFile {
   constructor() {
@@ -42,6 +41,7 @@ const start = async () => {
             play(args, message);
             break;
           case "quiz":
+            console.log("quiz");
             quiz(args, message, playlistURL, maxSongs, prefix);
             break;
           case "quizpl":

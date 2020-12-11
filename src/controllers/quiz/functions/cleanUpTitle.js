@@ -1,12 +1,13 @@
 import { final, prostii } from "../quizExports";
 
 export const cleanUpTitle = (title) => {
+  // console.log(title);
   const extensions = ["\\.flv", "\\.mp4", "\\.avi", "\\.mp3"].join("|");
-  const titleWithoutParenthesis = title
-    .replace(/\([^)]*\)|\[[^]*\]|\*[^*]*\*/g, "")
-    .trim();
-  const titleWithoutMizerii = titleWithoutParenthesis
-    .replace(RegExp(`(${prostii})`, "g"), "")
+  // const titleWithoutParenthesis = title
+  //   .replace(/\([^)]*\)|\[[^]*\]|\*[^*]*\*/g, "")
+  //   .trim();
+  const titleWithoutMizerii = title
+    .replace(RegExp(`(?:${prostii})`, "g"), "")
     .trim();
   // console.log(RegExp(`(${prostii})`, "g"));
   const titleWithoutYear = titleWithoutMizerii.replace(
@@ -14,7 +15,7 @@ export const cleanUpTitle = (title) => {
     ""
   );
   const titleWIthoutExtensions = titleWithoutYear
-    .replace(RegExp(`(${extensions})`, "g"), "")
+    .replace(RegExp(`(?:${extensions})`, "g"), "")
     .trim();
   //Asta e de pe stackoverflow=))
   const titleWithoutEmoji = titleWIthoutExtensions.replace(
@@ -22,8 +23,30 @@ export const cleanUpTitle = (title) => {
     ""
   );
   const cleanUpOnceMore = titleWithoutEmoji
-    .replace(RegExp(`(${final})`, "g"), "")
+    .replace(RegExp(`(?:${final})`, "g"), "")
     .trim();
+  // console.log(RegExp(`(${final})`, "g"));
+  return cleanUpOnceMore;
+};
+
+export const cleanUpString = (title) => {
+  const extensions = ["\\.flv", "\\.mp4", "\\.avi", "\\.mp3"].join("|");
+
+  const titleWithoutMizerii = title
+    .replace(RegExp(`(?:${prostii})`, "g"), "")
+    .trim();
+  const titleWithoutYear = titleWithoutMizerii.replace(
+    /(?!1947)(19|20)[0-9][0-9]:?/g,
+    ""
+  );
+  const titleWIthoutExtensions = titleWithoutYear
+    .replace(RegExp(`(?:${extensions})`, "g"), "")
+    .trim();
+  //Asta e de pe stackoverflow=))
+  const cleanUpOnceMore = titleWIthoutExtensions
+    .replace(RegExp(`(?:${final})`, "g"), "")
+    .trim();
+  // console.log(RegExp(`(?:${prostii})`, "g"));
   // console.log(RegExp(`(${final})`, "g"));
   return cleanUpOnceMore;
 };

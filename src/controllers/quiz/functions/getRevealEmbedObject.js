@@ -4,12 +4,18 @@ import { getJoinedRankingStrings } from "./getJoinedRankingStrings";
 export const getRevealEmbedObject = (
   shuffledSongsInfo,
   songIndex,
-  competingUsers
+  competingUsers,
+  totalSongs
 ) => {
   const currentSong = shuffledSongsInfo[songIndex];
-  const currentArtist = currentSong.artistName;
-  const currentSongName = currentSong.name;
-  const currentSongTitle = `${currentArtist} - ${currentSongName}`;
+  // console.log(currentSong, songIndex, shuffledSongsInfo);
+  const featuredArtists = currentSong.artistsNames.slice(1);
+  const mainArtist = currentSong.artistsNames[0];
+  const currentArtists = `${mainArtist}${
+    featuredArtists.length ? ` feat. ${featuredArtists.join(" , ")}` : ""
+  }`;
+  const currentSongName = currentSong.songName;
+  const currentSongTitle = `${currentArtists} - ${currentSongName}`;
   const currentSongThumbnail = currentSong.thumbnail;
   const joinedRankingStrings = getJoinedRankingStrings(competingUsers);
   const reveal = {
@@ -20,7 +26,7 @@ export const getRevealEmbedObject = (
     },
     description: `__**LEADERBOARD**__ \n\n ${joinedRankingStrings}`,
     footer: {
-      text: `Music Quiz - track ${songIndex + 1}/${shuffledSongsInfo.length}`,
+      text: `Music Quiz - track ${songIndex + 1}/${totalSongs}`,
     },
   };
 
