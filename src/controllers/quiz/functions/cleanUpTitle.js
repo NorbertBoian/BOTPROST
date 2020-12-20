@@ -1,51 +1,56 @@
-import { final, prostii } from "../quizExports";
+import { final, prostii, prostiiFix } from "../quizExports";
 
+const extensions = ["\\.flv", "\\.mp4", "\\.avi", "\\.mp3", "\\.wmv"].join("|");
 export const cleanUpTitle = (title) => {
   // console.log(title);
-  const extensions = ["\\.flv", "\\.mp4", "\\.avi", "\\.mp3"].join("|");
-  // const titleWithoutParenthesis = title
-  //   .replace(/\([^)]*\)|\[[^]*\]|\*[^*]*\*/g, "")
-  //   .trim();
-  const titleWithoutMizerii = title
-    .replace(RegExp(`(?:${prostii})`, "g"), "")
+  const titleWithoutParenthesis = title
+    .replace(/\([^)]*\)|\[[^\]]*\]|\*[^*]*\*/g, "")
     .trim();
-  // console.log(RegExp(`(${prostii})`, "g"));
-  const titleWithoutYear = titleWithoutMizerii.replace(
-    /(?!1947)(19|20)[0-9][0-9]/g,
+  const titleWithoutYear = titleWithoutParenthesis.replace(
+    /(?!1944)(?:19|20)[0-9][0-9]:?/g,
     ""
   );
-  const titleWIthoutExtensions = titleWithoutYear
-    .replace(RegExp(`(?:${extensions})`, "g"), "")
+  const titleWithoutMizerii = titleWithoutYear
+    .replace(RegExp(`(?:${prostii})`, "gi"), "")
+    .replace(RegExp(`(?:${prostiiFix})`, "g"), "")
+    .trim();
+  // console.log(RegExp(`(${prostii})`, "g"));
+
+  const titleWIthoutExtensions = titleWithoutMizerii
+    .replace(RegExp(`(?:${extensions})`, "gi"), "")
     .trim();
   //Asta e de pe stackoverflow=))
   const titleWithoutEmoji = titleWIthoutExtensions.replace(
     /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g,
     ""
   );
-  const cleanUpOnceMore = titleWithoutEmoji
-    .replace(RegExp(`(?:${final})`, "g"), "")
-    .trim();
+  // const cleanUpOnceMore = titleWithoutEmoji
+  //   .replace(RegExp(`(?:${final})`, "gi"), "")
+  //   .trim();
+  const cleanUpOnceMore = final(titleWithoutEmoji).trim();
+  // if (cleanUpOnceMore.includes("LIVE"))
+  // console.log("TITLE", titleWithoutYear, "\n", titleWithoutMizerii);
   // console.log(RegExp(`(${final})`, "g"));
   return cleanUpOnceMore;
 };
 
 export const cleanUpString = (title) => {
-  const extensions = ["\\.flv", "\\.mp4", "\\.avi", "\\.mp3"].join("|");
+  const titleWithoutYear = title.replace(/(?!1944)(19|20)[0-9][0-9]:?/g, "");
+  const titleWithoutMizerii = titleWithoutYear
+    .replace(RegExp(`(?:${prostii})`, "gi"), "")
+    .replace(RegExp(`(?:${prostiiFix})`, "g"), "")
+    .trim();
 
-  const titleWithoutMizerii = title
-    .replace(RegExp(`(?:${prostii})`, "g"), "")
-    .trim();
-  const titleWithoutYear = titleWithoutMizerii.replace(
-    /(?!1947)(19|20)[0-9][0-9]:?/g,
-    ""
-  );
-  const titleWIthoutExtensions = titleWithoutYear
-    .replace(RegExp(`(?:${extensions})`, "g"), "")
-    .trim();
   //Asta e de pe stackoverflow=))
-  const cleanUpOnceMore = titleWIthoutExtensions
-    .replace(RegExp(`(?:${final})`, "g"), "")
+  const titleWithoutExtensions = titleWithoutMizerii
+    .replace(RegExp(`(?:${extensions})`, "gi"), "")
     .trim();
+  // const cleanUpOnceMore = titleWithoutExtensions
+  //   .replace(RegExp(`(?:${final})`, "gi"), "")
+  //   .trim();
+  const cleanUpOnceMore = final(titleWithoutExtensions).trim();
+  // if (cleanUpOnceMore.includes("LIVE"))
+  // console.log("STRING", titleWithoutYear, "\n", titleWithoutMizerii);
   // console.log(RegExp(`(?:${prostii})`, "g"));
   // console.log(RegExp(`(${final})`, "g"));
   return cleanUpOnceMore;

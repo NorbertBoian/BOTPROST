@@ -1,0 +1,2414 @@
+[33m[nodemon] 2.0.6[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `babel-node ./testFunction.js`[39m
+{
+  countryName: 'France',
+  artistsNames: 'Tom Leeb',
+  songName: 'Mon Alliée (The Best In Me)',
+  songURL: 'https://www.youtube.com/watch?v=0VHdFnaWgJQ',
+  songDuration: '3:00',
+  image: 'https://static.eurovision.tv/hb-cgi/images/901976c4-51f5-4b79-9a74-d5d0d4a396a9/card.jpeg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Germany',
+  artistsNames: 'Ben Dolic',
+  songName: 'Violent Thing',
+  songURL: 'https://www.youtube.com/watch?v=4swmQ7YITug',
+  songDuration: '3:42',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8ff46f19-47f6-4245-8f9c-ac041c281c69/card.jpeg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Italy',
+  artistsNames: 'Diodato',
+  songName: 'Fai Rumore',
+  songURL: 'https://www.youtube.com/watch?v=tPv9ZPXmFWU',
+  songDuration: '3:46',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8fd82d58-c5b6-4dbe-b415-333fa928bb46/card.jpeg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Spain',
+  artistsNames: 'Blas Cantó',
+  songName: 'Universo',
+  songURL: 'https://www.youtube.com/watch?v=nXb46PPcwQ0',
+  songDuration: '3:07',
+  image: 'https://static.eurovision.tv/hb-cgi/images/90195ae4-1ea7-488a-8629-0ecccd258378/card.jpeg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'The Netherlands',
+  artistsNames: 'Jeangu Macrooy',
+  songName: 'Grow',
+  songURL: 'https://www.youtube.com/watch?v=sMcxWB90TTY',
+  songDuration: '3:21',
+  image: 'https://static.eurovision.tv/hb-cgi/images/9000990e-7ff0-4e3f-8a28-4b1f6bb08c8c/card.jpeg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'United Kingdom',
+  artistsNames: 'James Newman',
+  songName: 'My Last Breath',
+  songURL: 'https://www.youtube.com/watch?v=6iS-lV909T4',
+  songDuration: '3:11',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8ff44774-27a8-4fdc-b403-770eaa64c8bc/card.jpeg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'The Netherlands',
+  artistsNames: 'Duncan Laurence',
+  songName: 'Arcade',
+  songURL: 'https://www.youtube.com/watch?v=R3D-r4ogr7s',
+  songDuration: '3:25',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181f0-6b70-44c0-bd27-0867a4547cd2/card.png',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Italy',
+  artistsNames: 'Mahmood',
+  songName: 'Soldi',
+  songURL: 'https://www.youtube.com/watch?v=M-aoyPa41Ic',
+  songDuration: '3:26',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181eb-8d21-4476-84ee-661c564a88d8/card.png',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Russia',
+  artistsNames: 'Sergey Lazarev',
+  songName: 'Scream',
+  songURL: 'https://www.youtube.com/watch?v=eNzlxEZ_JG4',
+  songDuration: '3:17',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181d0-25ee-4601-9bfe-0acdb6abfacf/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Switzerland',
+  artistsNames: 'Luca Hänni',
+  songName: 'She Got Me',
+  songURL: 'https://www.youtube.com/watch?v=zEGgKQf1cws',
+  songDuration: '3:21',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181ef-986f-4f88-8251-cc4dc5d6357c/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Sweden',
+  artistsNames: 'John Lundvik',
+  songName: 'Too Late For Love',
+  songURL: 'https://www.youtube.com/watch?v=oEdWkdVKIqQ',
+  songDuration: '3:20',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181f8-2e1f-44cd-98de-ba0e144baabf/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Norway',
+  artistsNames: 'KEiiNO',
+  songName: 'Spirit in the Sky',
+  songURL: 'https://www.youtube.com/watch?v=Ovt7YGHAj8I',
+  songDuration: '3:22',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181c9-014d-4c65-8c59-12e73a3e2c33/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'North Macedonia',
+  artistsNames: 'Tamara Todevska',
+  songName: 'Proud',
+  songURL: 'https://www.youtube.com/watch?v=0pAURAsum4A',
+  songDuration: '3:13',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181f2-cfd7-4f52-80a8-ba2b51c5576a/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Azerbaijan',
+  artistsNames: 'Chingiz',
+  songName: 'Truth',
+  songURL: 'https://www.youtube.com/watch?v=DJFtbYsn6eY',
+  songDuration: '3:22',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8dad2e7a-f098-488b-8e78-33e2c2868ae8/card.jpeg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Australia',
+  artistsNames: 'Kate Miller-Heidke',
+  songName: 'Zero Gravity',
+  songURL: 'https://www.youtube.com/watch?v=Eo5H62mCIsg',
+  songDuration: '3:21',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181f9-b468-4d5a-8f23-aaf81ef80fcc/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Iceland',
+  artistsNames: 'Hatari',
+  songName: 'Hatrið mun sigra',
+  songURL: 'https://www.youtube.com/watch?v=U1HNhA-7OEU',
+  songDuration: '3:08',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181ea-f8b0-4c3b-95ef-5014f053c878/card.png',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Czech Republic',
+  artistsNames: 'Lake Malawi',
+  songName: 'Friend of a Friend',
+  songURL: 'https://www.youtube.com/watch?v=8-HR-L4QY0g',
+  songDuration: '3:12',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181f6-ebca-482b-8e4b-443ce37fd4e5/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Denmark',
+  artistsNames: 'Leonora',
+  songName: 'Love Is Forever',
+  songURL: 'https://www.youtube.com/watch?v=mucmvTLHJQM',
+  songDuration: '3:18',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181fa-7714-42cf-bd0f-e802a9cbfc08/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Cyprus',
+  artistsNames: 'Tamta',
+  songName: 'Replay',
+  songURL: 'https://www.youtube.com/watch?v=wIpEI-NhRxg',
+  songDuration: '3:12',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181ef-45fa-492d-ab78-328183222f8e/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Malta',
+  artistsNames: 'Michela',
+  songName: 'Chameleon',
+  songURL: 'https://www.youtube.com/watch?v=mRwLt9HCjbk',
+  songDuration: '3:21',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181f6-c617-4c63-8469-d03ab72d8d76/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Slovenia',
+  artistsNames: 'Zala Kralj & Gašper Šantl',
+  songName: 'Sebi',
+  songURL: 'https://www.youtube.com/watch?v=vGtPNQ6g6Ng',
+  songDuration: '3:17',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181f8-1c09-449b-b3fc-4fc7bc8c4f7b/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'France',
+  artistsNames: 'Bilal Hassani',
+  songName: 'Roi',
+  songURL: 'https://www.youtube.com/watch?v=AjZNbIQtWvw',
+  songDuration: '3:15',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181ca-f70f-4fe1-996f-6f6ebbc4c0f9/card.jpeg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Albania',
+  artistsNames: 'Jonida Maliqi',
+  songName: 'Ktheju tokës',
+  songURL: 'https://www.youtube.com/watch?v=OQFbA7yfzjo',
+  songDuration: '3:22',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181f7-788b-4844-a6e6-906e0443f747/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Serbia',
+  artistsNames: 'Nevena Božović',
+  songName: 'Kruna',
+  songURL: 'https://www.youtube.com/watch?v=_ZlGaTtWCWI',
+  songDuration: '3:19',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181f7-d905-47a7-bace-513599ca2195/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'San Marino',
+  artistsNames: 'Serhat',
+  songName: 'Say Na Na Na',
+  songURL: 'https://www.youtube.com/watch?v=d_iEis_ZRoQ',
+  songDuration: '3:14',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181c6-113d-402f-9459-91ed681ccd01/card.png',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Estonia',
+  artistsNames: 'Victor Crone',
+  songName: 'Storm',
+  songURL: 'https://www.youtube.com/watch?v=PppvSl3_W4E',
+  songDuration: '3:22',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181f3-6091-4599-8f58-a8c892c14d73/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Greece',
+  artistsNames: 'Katerine Duska',
+  songName: 'Better Love',
+  songURL: 'https://www.youtube.com/watch?v=5pQV_-40m_U',
+  songDuration: '3:21',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181ef-1d18-4ea9-a9ae-2f5f8245b639/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Spain',
+  artistsNames: 'Miki',
+  songName: 'La Venda',
+  songURL: 'https://www.youtube.com/watch?v=lWXuohnM14U',
+  songDuration: '3:15',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181f6-b3fa-4e79-aa70-687be4d21921/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Israel',
+  artistsNames: 'Kobi Marimi',
+  songName: 'Home',
+  songURL: 'https://www.youtube.com/watch?v=uCdS42uCqP0',
+  songDuration: '3:27',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181f2-bf96-46af-9409-c81613e5a08d/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Belarus',
+  artistsNames: 'ZENA',
+  songName: 'Like It',
+  songURL: 'https://www.youtube.com/watch?v=6IxL8uvArVg',
+  songDuration: '3:19',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181f7-8e21-43a1-a3cf-4b6820514f83/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Germany',
+  artistsNames: 'S!sters',
+  songName: 'Sister',
+  songURL: 'https://www.youtube.com/watch?v=yFbSj_yPCPM',
+  songDuration: '3:19',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181fc-eb3e-47fd-807f-c6c385e0976a/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'United Kingdom',
+  artistsNames: 'Michael Rice',
+  songName: 'Bigger Than Us',
+  songURL: 'https://www.youtube.com/watch?v=HV-eOhTS8Dw',
+  songDuration: '3:20',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9181f8-e268-4169-84ca-5587cea91360/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Israel',
+  artistsNames: 'Netta',
+  songName: 'TOY',
+  songURL: 'https://www.youtube.com/watch?v=84LBjXaeKk4',
+  songDuration: '3:17',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f66-0b2c-4716-b184-b3554e82af5c/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Cyprus',
+  artistsNames: 'Eleni Foureira',
+  songName: 'Fuego',
+  songURL: 'https://www.youtube.com/watch?v=vyDTbJ4wenY',
+  songDuration: '3:17',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f64-c34f-4d2e-9b09-a3a936a790c1/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Austria',
+  artistsNames: 'Cesár Sampson',
+  songName: 'Nobody But You',
+  songURL: 'https://www.youtube.com/watch?v=a8Yvzo1puoE',
+  songDuration: '3:16',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f64-44ce-44aa-8c81-1599af1a9ea1/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Germany',
+  artistsNames: 'Michael Schulte',
+  songName: 'You Let Me Walk Alone',
+  songURL: 'https://www.youtube.com/watch?v=N4YwSy4Q9k0',
+  songDuration: '3:11',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f62-1f77-48e1-ba90-a7d30d9375f0/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Italy',
+  artistsNames: 'Ermal Meta e Fabrizio Moro',
+  songName: 'Non Mi Avete Fatto Niente',
+  songURL: 'https://www.youtube.com/watch?v=81M-mp5t8uM',
+  songDuration: '3:18',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f6a-489d-4021-af4a-f71a19ea879e/card.jpeg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Czech Republic',
+  artistsNames: 'Mikolas Josef',
+  songName: 'Lie To Me',
+  songURL: 'https://www.youtube.com/watch?v=w0ZUuQe0shk',
+  songDuration: '3:07',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f64-d701-4eae-9112-598ee3f1d4ad/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Sweden',
+  artistsNames: 'Benjamin Ingrosso',
+  songName: 'Dance You Off',
+  songURL: 'https://www.youtube.com/watch?v=4lGDRmrQLTA',
+  songDuration: '3:20',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f62-c8ca-48f6-9910-e0faf902c78d/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Estonia',
+  artistsNames: 'Elina Nechayeva',
+  songName: 'La Forza',
+  songURL: 'https://www.youtube.com/watch?v=ImawXdXIGd8',
+  songDuration: '3:17',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f65-2ae1-47f0-b752-da5d4fc9245e/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Denmark',
+  artistsNames: 'Rasmussen',
+  songName: 'Higher Ground',
+  songURL: 'https://www.youtube.com/watch?v=c0kP074Mw0k',
+  songDuration: '3:15',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f65-0af7-4c68-ad63-e44ea56602a6/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Moldova',
+  artistsNames: 'DoReDoS',
+  songName: 'My Lucky Day',
+  songURL: 'https://www.youtube.com/watch?v=m1kjPaVAeeE',
+  songDuration: '3:20',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f63-c2dc-4b85-bebb-99553c0a8fa9/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Albania',
+  artistsNames: 'Eugent Bushpepa',
+  songName: 'Mall',
+  songURL: 'https://www.youtube.com/watch?v=VbNFep0qyck',
+  songDuration: '3:15',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f63-a60b-4d12-8bee-b72e4c66f8f6/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Lithuania',
+  artistsNames: 'Ieva Zasimauskaitė',
+  songName: "When We're Old",
+  songURL: 'https://www.youtube.com/watch?v=ezev-dWcd_E',
+  songDuration: '3:14',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f64-5505-4635-819a-e472684dc18a/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'France',
+  artistsNames: 'Madame Monsieur',
+  songName: 'Mercy',
+  songURL: 'https://www.youtube.com/watch?v=vjLuTtUv0Ns',
+  songDuration: '3:16',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f37-cee4-4b88-af9c-2f3615cadf38/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Bulgaria',
+  artistsNames: 'EQUINOX',
+  songName: 'Bones',
+  songURL: 'https://www.youtube.com/watch?v=vC-1tdGDFQc',
+  songDuration: '3:17',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f64-905b-4173-a2b5-74f0f1babae9/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Norway',
+  artistsNames: 'Alexander Rybak',
+  songName: "That's How You Write A Song",
+  songURL: 'https://www.youtube.com/watch?v=N17BdRwOvBA',
+  songDuration: '3:15',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f63-62ca-45ae-bb09-8d3592112729/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Ireland',
+  artistsNames: "Ryan O'Shaughnessy",
+  songName: 'Together',
+  songURL: 'https://www.youtube.com/watch?v=QD1cQ2wZ1dk',
+  songDuration: '3:12',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f65-f202-48b7-b1b2-32ef97faac27/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Ukraine',
+  artistsNames: 'MELOVIN',
+  songName: 'Under The Ladder',
+  songURL: 'https://www.youtube.com/watch?v=lhOuMYtQ94M',
+  songDuration: '3:14',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f62-94c5-4314-b356-afadaeb899e6/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'The Netherlands',
+  artistsNames: 'Waylon',
+  songName: "Outlaw In 'Em",
+  songURL: 'https://www.youtube.com/watch?v=p7jHz5asMs8',
+  songDuration: '3:05',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f62-a708-4382-9187-e351fabae33e/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Serbia',
+  artistsNames: 'Sanja Ilić & Balkanika',
+  songName: 'Nova Deca',
+  songURL: 'https://www.youtube.com/watch?v=g0tS6oTseNw',
+  songDuration: '3:19',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f63-015c-413b-a242-c78a6750f345/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Australia',
+  artistsNames: 'Jessica Mauboy',
+  songName: 'We Got Love',
+  songURL: 'https://www.youtube.com/watch?v=2BBLTY6T2Ck',
+  songDuration: '3:20',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f64-1fdb-4473-93b5-884d5bbef600/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Hungary',
+  artistsNames: 'AWS',
+  songName: 'Viszlát Nyár',
+  songURL: 'https://www.youtube.com/watch?v=p6e1TmYb33w',
+  songDuration: '3:14',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f65-bd19-44df-9184-ce7531afd574/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Slovenia',
+  artistsNames: 'Lea Sirk',
+  songName: 'Hvala, ne!',
+  songURL: 'https://www.youtube.com/watch?v=sRtygbA0-DU',
+  songDuration: '3:17',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f62-dc41-4560-a1d1-bd5e8e50dfbf/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Spain',
+  artistsNames: 'Amaia y Alfred',
+  songName: 'Tu Canción',
+  songURL: 'https://www.youtube.com/watch?v=28oMEFgSoyk',
+  songDuration: '3:15',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f69-4b85-4ada-8836-2050de48baa6/card.jpeg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'United Kingdom',
+  artistsNames: 'SuRie',
+  songName: 'Storm',
+  songURL: 'https://www.youtube.com/watch?v=n0ydtXG-tqY',
+  songDuration: '3:07',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f3e-5944-41d5-941e-ad093be9c3dc/card.png',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Finland',
+  artistsNames: 'Saara Aalto',
+  songName: 'Monsters',
+  songURL: 'https://www.youtube.com/watch?v=hdjiuCUUpPc',
+  songDuration: '3:13',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f65-8b19-410e-9139-eef7085a87e5/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Portugal',
+  artistsNames: 'Cláudia Pascoal',
+  songName: 'O Jardim',
+  songURL: 'https://www.youtube.com/watch?v=mHjGbADMcOI',
+  songDuration: '3:03',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f56-bce3-4844-89a3-b15b5e02a81f/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Portugal',
+  artistsNames: 'Salvador Sobral',
+  songName: 'Amar Pelos Dois',
+  songURL: 'https://www.youtube.com/watch?v=Qotooj7ODCM',
+  songDuration: '3:05',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917d7a-f64e-4cbb-84b1-9f3deae2bb6c/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Bulgaria',
+  artistsNames: 'Kristian Kostov',
+  songName: 'Beautiful Mess',
+  songURL: 'https://www.youtube.com/watch?v=OMmm-G078LM',
+  songDuration: '3:12',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917d7b-b4eb-4386-8c6d-c468f3a703e5/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Moldova',
+  artistsNames: 'Sunstroke Project',
+  songName: 'Hey Mamma',
+  songURL: 'https://www.youtube.com/watch?v=SWaQdHoCvYk',
+  songDuration: '3:17',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917d7b-54d6-4258-b202-b6b08e9c113e/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Belgium',
+  artistsNames: 'Blanche',
+  songName: 'City Lights',
+  songURL: 'https://www.youtube.com/watch?v=SznlioGhq2k',
+  songDuration: '3:11',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917d7b-266a-489e-bb54-023a7fa44ba1/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Sweden',
+  artistsNames: 'Robin Bengtsson',
+  songName: "I Can't Go On",
+  songURL: 'https://www.youtube.com/watch?v=yqSV81kmsbQ',
+  songDuration: '3:10',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917d7b-362e-40f8-a00f-4684645ea1ba/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Italy',
+  artistsNames: 'Francesco Gabbani',
+  songName: "Occidentali's Karma",
+  songURL: 'https://www.youtube.com/watch?v=KieE_MLv-ZY',
+  songDuration: '3:17',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917d7c-06ff-49db-9465-306f08a6dd3e/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Romania',
+  artistsNames: 'Ilinca ft. Alex Florea',
+  songName: 'Yodel It!',
+  songURL: 'https://www.youtube.com/watch?v=ZSHc7iDuBCQ',
+  songDuration: '3:10',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917d7c-db1b-4507-a484-54c315a06e9a/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Hungary',
+  artistsNames: 'Joci Pápai',
+  songName: 'Origo',
+  songURL: 'https://www.youtube.com/watch?v=hqM0AkP7zcI',
+  songDuration: '3:16',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917d7c-cb19-4b91-8d17-2bf6178a7b29/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Australia',
+  artistsNames: 'Isaiah',
+  songName: "Don't Come Easy",
+  songURL: 'https://www.youtube.com/watch?v=YTCP4S1dqwA',
+  songDuration: '3:13',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917c99-99eb-4228-96f0-2977319a0bea/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Norway',
+  artistsNames: 'JOWST',
+  songName: 'Grab The Moment',
+  songURL: 'https://www.youtube.com/watch?v=U-Bk0PCotY0',
+  songDuration: '3:08',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917d7c-36e7-423c-8668-049da7883417/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'The Netherlands',
+  artistsNames: 'OG3NE',
+  songName: 'Lights and Shadows',
+  songURL: 'https://www.youtube.com/watch?v=_9XsCqGg8ls',
+  songDuration: '3:19',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917d7a-e65d-4e26-b887-79cd2648be17/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'France',
+  artistsNames: 'Alma',
+  songName: 'Requiem',
+  songURL: 'https://www.youtube.com/watch?v=HjiLKsLQl4I',
+  songDuration: '3:13',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917d7b-c479-4d37-a628-619581250c4d/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Croatia',
+  artistsNames: 'Jacques Houdek',
+  songName: 'My Friend',
+  songURL: 'https://www.youtube.com/watch?v=tkP0xw_i_Ho',
+  songDuration: '3:14',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917b9c-78ba-420e-9967-1582e5d7f6df/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Azerbaijan',
+  artistsNames: 'Dihaj',
+  songName: 'Skeletons',
+  songURL: 'https://www.youtube.com/watch?v=g_HSRHqd_7s',
+  songDuration: '3:13',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917d79-cc4d-44b3-b9f8-961aaf9aa987/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'United Kingdom',
+  artistsNames: 'Lucie Jones',
+  songName: 'Never Give Up On You',
+  songURL: 'https://www.youtube.com/watch?v=Fl1GYTg4GmA',
+  songDuration: '3:14',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917d7b-f6ac-43da-a9bd-e0dc21683378/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Austria',
+  artistsNames: 'Nathan Trent',
+  songName: 'Running On Air',
+  songURL: 'https://www.youtube.com/watch?v=gJIjZF5sgzg',
+  songDuration: '3:03',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917c9a-33d6-40d6-9e70-eb8b793b82de/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Belarus',
+  artistsNames: 'Naviband',
+  songName: 'Story of My Life',
+  songURL: 'https://www.youtube.com/watch?v=coFfFZvPmRY',
+  songDuration: '3:14',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917d7c-4b28-4bee-aa5e-e62f7087879e/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Armenia',
+  artistsNames: 'Artsvik',
+  songName: 'Fly With Me',
+  songURL: 'https://www.youtube.com/watch?v=g373Libigw8',
+  songDuration: '3:08',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917d79-aa9a-44a1-8eba-a2656f4f2881/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Greece',
+  artistsNames: 'Demy',
+  songName: 'This is Love',
+  songURL: 'https://www.youtube.com/watch?v=iO14p2uCzkM',
+  songDuration: '3:13',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917c99-6a08-4b73-ab70-bddc1f323099/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Denmark',
+  artistsNames: 'Anja',
+  songName: 'Where I Am',
+  songURL: 'https://www.youtube.com/watch?v=vUbGnq8maS0',
+  songDuration: '3:12',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917d7c-8370-40e0-bfa2-051176061358/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Cyprus',
+  artistsNames: 'Hovig',
+  songName: 'Gravity',
+  songURL: 'https://www.youtube.com/watch?v=ZDe9FCLgE04',
+  songDuration: '3:16',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917d7b-1541-4d90-ba2f-d50a3160e770/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Poland',
+  artistsNames: 'Kasia Moś',
+  songName: 'Flashlight',
+  songURL: 'https://www.youtube.com/watch?v=c3S3g0MKx08',
+  songDuration: '3:14',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917d7c-27f3-4514-ac67-d586dbc50beb/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Israel',
+  artistsNames: 'IMRI',
+  songName: 'I Feel Alive',
+  songURL: 'https://www.youtube.com/watch?v=YapnW_zfWJk',
+  songDuration: '3:08',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917d7c-699e-480e-87a4-553008a06b96/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Ukraine',
+  artistsNames: 'O.Torvald',
+  songName: 'Time',
+  songURL: 'https://www.youtube.com/watch?v=mogNLkIEI0k',
+  songDuration: '3:18',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917d7c-1787-4ab3-8d59-e45add5b2afa/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Germany',
+  artistsNames: 'Levina',
+  songName: 'Perfect Life',
+  songURL: 'https://www.youtube.com/watch?v=t1KKjykH6fw',
+  songDuration: '3:14',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917d7b-e758-4582-afbf-ac69145734eb/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Spain',
+  artistsNames: 'Manel Navarro',
+  songName: 'Do It For Your Lover',
+  songURL: 'https://www.youtube.com/watch?v=qAOXHdLdlqQ',
+  songDuration: '3:20',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917bc6-4eb4-45eb-8e7d-079fd406affe/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Ukraine',
+  artistsNames: 'Jamala',
+  songName: '1944',
+  songURL: 'https://www.youtube.com/watch?v=B-rnM-MwRHY',
+  songDuration: '3:18',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917b8e-2a80-4832-9100-a4b47d0088a8/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Australia',
+  artistsNames: 'Dami Im',
+  songName: 'Sound Of Silence',
+  songURL: 'https://www.youtube.com/watch?v=5ymFX91HwM0',
+  songDuration: '3:23',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91792e-b104-4a37-9afc-865bacbd33ca/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Russia',
+  artistsNames: 'Sergey Lazarev',
+  songName: 'You Are The Only One',
+  songURL: 'https://www.youtube.com/watch?v=e94dst20C9Y',
+  songDuration: '3:11',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9179ba-a10e-4a73-a379-f246da81ed0c/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Bulgaria',
+  artistsNames: 'Poli Genova',
+  songName: 'If Love Was A Crime',
+  songURL: 'https://www.youtube.com/watch?v=PQqUTigWKHY',
+  songDuration: '3:11',
+  image: 'https://static.eurovision.tv/hb-cgi/images/9045b6be-00f2-44ac-b268-8313194a136e/card.png',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Sweden',
+  artistsNames: 'Frans',
+  songName: 'If I Were Sorry',
+  songURL: 'https://www.youtube.com/watch?v=2AIPrVchJN8',
+  songDuration: '3:14',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917b7f-060d-47bf-9f2e-aecdd18ba457/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'France',
+  artistsNames: 'Amir',
+  songName: "J'ai cherché",
+  songURL: 'https://www.youtube.com/watch?v=-aLPsiyavcU',
+  songDuration: '3:15',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91796c-4270-4d30-b0a8-9e40ece9c56a/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Armenia',
+  artistsNames: 'Iveta Mukuchyan',
+  songName: 'LoveWave',
+  songURL: 'https://www.youtube.com/watch?v=nL066Rp7J7k',
+  songDuration: '3:05',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91792d-58b9-4038-99a2-595b3f8a1b1f/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Poland',
+  artistsNames: 'Michał Szpak',
+  songName: 'Color Of Your Life',
+  songURL: 'https://www.youtube.com/watch?v=87BBmxm7IJU',
+  songDuration: '3:16',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9179ad-9024-4777-ab90-9ba73ff626e5/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Lithuania',
+  artistsNames: 'Donny Montell',
+  songName: "I've Been Waiting for This Night",
+  songURL: 'https://www.youtube.com/watch?v=O1wS7NNCo38',
+  songDuration: '3:17',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917996-9bfe-4202-a384-f200f8a74e1f/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Belgium',
+  artistsNames: 'Laura Tesoro',
+  songName: "What's The Pressure",
+  songURL: 'https://www.youtube.com/watch?v=xDBjhAGaeWg',
+  songDuration: '3:13',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91793c-aaa7-48d5-b182-352de7956158/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'The Netherlands',
+  artistsNames: 'Douwe Bob',
+  songName: 'Slow Down',
+  songURL: 'https://www.youtube.com/watch?v=PwF9DI89q1w',
+  songDuration: '3:08',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917b87-5437-43c5-8293-312213a6bdf7/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Malta',
+  artistsNames: 'Ira Losco',
+  songName: 'Walk On Water',
+  songURL: 'https://www.youtube.com/watch?v=58YS5m3EYVY',
+  songDuration: '3:22',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91799c-edb2-4294-a613-a42c963878da/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Austria',
+  artistsNames: 'ZOË',
+  songName: "Loin d'ici",
+  songURL: 'https://www.youtube.com/watch?v=3xuPYt5i5cE',
+  songDuration: '3:12',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917930-89d5-422d-b052-4283f93b96db/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Israel',
+  artistsNames: 'Hovi Star',
+  songName: 'Made Of Stars',
+  songURL: 'https://www.youtube.com/watch?v=SS5TB2XUdgs',
+  songDuration: '3:18',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917984-ae44-4536-a0e9-167bbb95a82a/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Latvia',
+  artistsNames: 'Justs',
+  songName: 'Heartbeat',
+  songURL: 'https://www.youtube.com/watch?v=o-2Lt7zzlBU',
+  songDuration: '3:11',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91798a-7d6d-4895-9f17-48244d757842/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Italy',
+  artistsNames: 'Francesca Michielin',
+  songName: 'No Degree Of Separation',
+  songURL: 'https://www.youtube.com/watch?v=YfnhDfy8AjU',
+  songDuration: '3:19',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917984-f738-4528-8798-8d9a388f35a3/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Azerbaijan',
+  artistsNames: 'Samra',
+  songName: 'Miracle',
+  songURL: 'https://www.youtube.com/watch?v=cB8eSLyffsI',
+  songDuration: '3:15',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917935-60f0-4426-9023-fd82e46e0dc9/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Serbia',
+  artistsNames: 'Sanja Vučić ZAA',
+  songName: 'Goodbye (Shelter)',
+  songURL: 'https://www.youtube.com/watch?v=yTlxLiSQWjk',
+  songDuration: '3:15',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9179be-f6ea-43ea-ad86-0eab0e7d19d9/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Hungary',
+  artistsNames: 'Freddie',
+  songName: 'Pioneer',
+  songURL: 'https://www.youtube.com/watch?v=bT2DcpqvorI',
+  songDuration: '3:15',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91797f-902c-4010-b0b2-469650ad0d09/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Georgia',
+  artistsNames: 'Nika Kocharov and Young Georgian Lolitaz',
+  songName: 'Midnight Gold',
+  songURL: 'https://www.youtube.com/watch?v=rviE2-9eiTI',
+  songDuration: '3:15',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917c60-702f-4222-a005-aa5672538403/card.png',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Cyprus',
+  artistsNames: 'Minus One',
+  songName: 'Alter Ego',
+  songURL: 'https://www.youtube.com/watch?v=idUxTqmCFR0',
+  songDuration: '3:14',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917949-9292-4101-a199-2d77e0ae2589/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Spain',
+  artistsNames: 'Barei',
+  songName: 'Say Yay!',
+  songURL: 'https://www.youtube.com/watch?v=EgbjNsxehrY',
+  songDuration: '3:16',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9179c4-1932-4c78-968a-2885f4c118e2/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Croatia',
+  artistsNames: 'Nina Kraljić',
+  songName: 'Lighthouse',
+  songURL: 'https://www.youtube.com/watch?v=U6bmKB3SHPY',
+  songDuration: '3:14',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917948-15c3-4e86-bd3d-4cd81e24302a/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'United Kingdom',
+  artistsNames: 'Joe and Jake',
+  songName: "You're Not Alone",
+  songURL: 'https://www.youtube.com/watch?v=XgGahKsBtts',
+  songDuration: '3:05',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917b92-04db-47d9-be88-1cfa0933c0bc/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Czech Republic',
+  artistsNames: 'Gabriela Gunčíková',
+  songName: 'I Stand',
+  songURL: 'https://www.youtube.com/watch?v=iGaX6Q_bc-o',
+  songDuration: '3:12',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91794a-f029-4912-9fd3-f6c1d49caadc/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Germany',
+  artistsNames: 'Jamie-Lee',
+  songName: 'Ghost',
+  songURL: 'https://www.youtube.com/watch?v=bHDHi37bboE',
+  songDuration: '3:09',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917970-28f4-4dba-8da5-dc44eb59c62b/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Sweden',
+  artistsNames: 'Måns Zelmerlöw',
+  songName: 'Heroes',
+  songURL: 'https://www.youtube.com/watch?v=5sGOwFVUU0I',
+  songDuration: '3:17',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9176b2-372a-4821-9823-e5be46a31a30/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Russia',
+  artistsNames: 'Polina Gagarina',
+  songName: 'A Million Voices',
+  songURL: 'https://www.youtube.com/watch?v=Q2gbKglCL5s',
+  songDuration: '3:13',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91769c-750e-4a23-b4c1-7c23ea53feee/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Italy',
+  artistsNames: 'Il Volo',
+  songName: 'Grande Amore',
+  songURL: 'https://www.youtube.com/watch?v=1TOMqZV2jA8',
+  songDuration: '3:18',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917672-550e-4f0f-a4d4-bc4ab87f7332/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Belgium',
+  artistsNames: 'Loïc Nottet',
+  songName: 'Rhythm Inside',
+  songURL: 'https://www.youtube.com/watch?v=G48p8eNhnd8',
+  songDuration: '3:08',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91760f-2913-4546-a2b3-a7320c87e164/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Australia',
+  artistsNames: 'Guy Sebastian',
+  songName: 'Tonight Again',
+  songURL: 'https://www.youtube.com/watch?v=H0EhhZWXTng',
+  songDuration: '3:09',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917601-0e34-47db-859b-61924c6ed7f3/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Latvia',
+  artistsNames: 'Aminata',
+  songName: 'Love Injected',
+  songURL: 'https://www.youtube.com/watch?v=-usdXbeGHi8',
+  songDuration: '3:17',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917674-e533-48c0-8dba-8da150220eb8/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Estonia',
+  artistsNames: 'Elina Born & Stig Rästa',
+  songName: 'Goodbye To Yesterday',
+  songURL: 'https://www.youtube.com/watch?v=Xsx_dIJOtgI',
+  songDuration: '3:09',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917632-72da-4b0a-86b1-a89288cf620a/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Norway',
+  artistsNames: 'Mørland & Debrah Scarlett',
+  songName: 'A Monster Like Me',
+  songURL: 'https://www.youtube.com/watch?v=vY1FCXDojMU',
+  songDuration: '3:18',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917698-1e25-484b-8c92-d675ba3f399f/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Israel',
+  artistsNames: 'Nadav Guedj',
+  songName: 'Golden Boy',
+  songURL: 'https://www.youtube.com/watch?v=-w-2K9U8UIs',
+  songDuration: '3:15',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917671-5e46-42b5-bac2-beef3e27dd3d/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Serbia',
+  artistsNames: 'Bojana Stamenov',
+  songName: 'Beauty Never Lies',
+  songURL: 'https://www.youtube.com/watch?v=c40kVKIoPvE',
+  songDuration: '3:10',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9176a2-2502-4c35-9aa7-7aa9102eaf44/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Georgia',
+  artistsNames: 'Nina Sublatti',
+  songName: 'Warrior',
+  songURL: 'https://www.youtube.com/watch?v=gWgDzQ0mWTg',
+  songDuration: '3:12',
+  image: 'https://static.eurovision.tv/hb-cgi/images/9045c83f-d385-4d05-b973-6043b9aeba0c/card.png',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Azerbaijan',
+  artistsNames: 'Elnur Huseynov',
+  songName: 'Hour Of The Wolf',
+  songURL: 'https://www.youtube.com/watch?v=IcVrAFtc5YI',
+  songDuration: '3:12',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91760b-111f-4a41-8abc-98881fdb494d/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Montenegro',
+  artistsNames: 'Knez',
+  songName: 'Adio',
+  songURL: 'https://www.youtube.com/watch?v=MTyi2XeeoJU',
+  songDuration: '3:09',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91768f-37a5-41fb-b27d-17ef74d70f98/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Slovenia',
+  artistsNames: 'Maraaya',
+  songName: 'Here For You',
+  songURL: 'https://www.youtube.com/watch?v=y1c7gDOaFY0',
+  songDuration: '3:12',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9176ad-38c9-447a-9d34-5131943d9437/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Romania',
+  artistsNames: 'Voltaj',
+  songName: 'De La Capat/ All Over Again',
+  songURL: 'https://www.youtube.com/watch?v=BGw0tUKOW7o',
+  songDuration: '3:15',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91769c-09de-46ae-a588-db1cebb1474b/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Armenia',
+  artistsNames: 'Genealogy',
+  songName: 'Face The Shadow',
+  songURL: 'https://www.youtube.com/watch?v=Z6O8pr7HH94',
+  songDuration: '3:09',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9175fa-6d15-4b84-b96c-7859fa9cf026/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Albania',
+  artistsNames: 'Elhaida Dani',
+  songName: "I'm Alive",
+  songURL: 'https://www.youtube.com/watch?v=fsH9iVaZSaA',
+  songDuration: '3:19',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9175f4-f25d-4bbc-9900-dd91b462b877/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Lithuania',
+  artistsNames: 'Monika Linkytė and Vaidas Baumila',
+  songName: 'This Time',
+  songURL: 'https://www.youtube.com/watch?v=xtB_slM63JA',
+  songDuration: '3:13',
+  image: 'https://static.eurovision.tv/hb-cgi/images/9045caf4-e985-442d-be6a-8f8927edbfaa/card.png',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Greece',
+  artistsNames: 'Maria Elena Kyriakou',
+  songName: 'One Last Breath',
+  songURL: 'https://www.youtube.com/watch?v=qD6epZ-YWSc',
+  songDuration: '3:03',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91765b-d935-4005-b690-1d3c243e7170/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Hungary',
+  artistsNames: 'Boggie',
+  songName: 'Wars For Nothing',
+  songURL: 'https://www.youtube.com/watch?v=MdybVsBESQc',
+  songDuration: '3:12',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917666-e4ab-4766-aab8-fd851e5aaf61/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Spain',
+  artistsNames: 'Edurne',
+  songName: 'Amanecer',
+  songURL: 'https://www.youtube.com/watch?v=NsMiJJlElAY',
+  songDuration: '3:16',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9176af-d19b-4120-9895-f4410c2894c3/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Cyprus',
+  artistsNames: 'John Karayiannis',
+  songName: 'One Thing I Should Have Done',
+  songURL: 'https://www.youtube.com/watch?v=RUNEoMBLGc8',
+  songDuration: '3:16',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917614-4a5f-48a7-89d5-dc628b703d4d/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Poland',
+  artistsNames: 'Monika Kuszyńska',
+  songName: 'In The Name Of Love',
+  songURL: 'https://www.youtube.com/watch?v=TReYIZYloSg',
+  songDuration: '3:04',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917698-50b7-4945-bc89-c026ec5f3c22/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'United Kingdom',
+  artistsNames: 'Electro Velvet',
+  songName: 'Still In Love With You',
+  songURL: 'https://www.youtube.com/watch?v=Ethyx4A5ajM',
+  songDuration: '3:01',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9176be-9eab-435a-9db9-1aa271bdb919/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'France',
+  artistsNames: 'Lisa Angell',
+  songName: "N'oubliez Pas",
+  songURL: 'https://www.youtube.com/watch?v=tJful-Jtc9o',
+  songDuration: '3:10',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917652-e2d2-425d-add5-11b9a3e2299f/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Austria',
+  artistsNames: 'The Makemakes',
+  songName: 'I Am Yours',
+  songURL: 'https://www.youtube.com/watch?v=-f993p0CAV8',
+  songDuration: '3:07',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917603-29b4-47ea-a7ab-0c75d6833235/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Germany',
+  artistsNames: 'Ann Sophie',
+  songName: ' Black Smoke',
+  songURL: 'https://www.youtube.com/watch?v=DGMJOchTRPc',
+  songDuration: '3:14',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917657-9970-45a2-8007-dcd88ed1cb42/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Austria',
+  artistsNames: 'Conchita Wurst',
+  songName: 'Rise Like a Phoenix',
+  songURL: 'https://www.youtube.com/watch?v=SaolVEJEjV4',
+  songDuration: '3:23',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9173cd-4010-4b88-9bd8-92e3f02a0d31/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'The Netherlands',
+  artistsNames: 'The Common Linnets',
+  songName: 'Calm After The Storm',
+  songURL: 'https://www.youtube.com/watch?v=bWe8PRsW4T0',
+  songDuration: '3:20',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9175e6-98cf-4e12-b3a7-b3a757caa549/card.png',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Sweden',
+  artistsNames: 'Sanna Nielsen',
+  songName: 'Undo',
+  songURL: 'https://www.youtube.com/watch?v=5PQJI-3LW-8',
+  songDuration: '3:17',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9175e4-3bac-4e62-96ba-bebce01f07e8/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Armenia',
+  artistsNames: 'Aram MP3',
+  songName: 'Not Alone',
+  songURL: 'https://www.youtube.com/watch?v=oj0oOV-2fRQ',
+  songDuration: '3:16',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9173c6-482f-4713-8a2f-c43e7099ba01/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Hungary',
+  artistsNames: 'András Kállay-Saunders',
+  songName: 'Running',
+  songURL: 'https://www.youtube.com/watch?v=T_RxJZ3N9kE',
+  songDuration: '3:18',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9175a8-03d1-4b1d-9405-fddf9b2fc649/card.png',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Ukraine',
+  artistsNames: 'Mariya Yaremchuk',
+  songName: 'Tick - Tock',
+  songURL: 'https://www.youtube.com/watch?v=slHboKF9PIQ',
+  songDuration: '3:18',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9175ea-8fcc-4c75-88f3-358a650d1340/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Russia',
+  artistsNames: 'Tolmachevy Sisters',
+  songName: 'Shine',
+  songURL: 'https://www.youtube.com/watch?v=BCNN1JAgWqk',
+  songDuration: '3:22',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9175d1-bfe3-45d2-a815-709e906f3ad7/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Norway',
+  artistsNames: 'Carl Espen',
+  songName: 'Silent Storm',
+  songURL: 'https://www.youtube.com/watch?v=BTMli8U17MM',
+  songDuration: '3:16',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9175ca-7292-4a5f-816e-ed833e716561/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Denmark',
+  artistsNames: 'Basim',
+  songName: 'Cliche Love Song',
+  songURL: 'https://www.youtube.com/watch?v=jnCTsJkieY4',
+  songDuration: '3:23',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917584-d634-4849-9082-4cbdba5f7cf8/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Spain',
+  artistsNames: 'Ruth Lorenzo',
+  songName: 'Dancing in the rain',
+  songURL: 'https://www.youtube.com/watch?v=-OtuM3Zvkeo',
+  songDuration: '3:19',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9175dd-8b64-470f-af48-267cbf729064/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Finland',
+  artistsNames: 'Softengine',
+  songName: 'Something Better',
+  songURL: 'https://www.youtube.com/watch?v=3FDWaFfo1CU',
+  songDuration: '3:16',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91758d-b968-4e66-9311-2da4d2b5fd9f/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Romania',
+  artistsNames: 'Paula Seling & OVI',
+  songName: 'Miracle',
+  songURL: 'https://www.youtube.com/watch?v=qN2h6__yJGQ',
+  songDuration: '3:26',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9175d1-408e-422b-853f-89035b9b24a2/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Switzerland',
+  artistsNames: 'Sebalter',
+  songName: 'Hunter Of Stars',
+  songURL: 'https://www.youtube.com/watch?v=DqjoM8ZlyMc',
+  songDuration: '3:17',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9175e5-d052-4c5b-997e-97142419f54a/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Poland',
+  artistsNames: 'Donatan & Cleo',
+  songName: 'My Słowianie - We Are Slavic',
+  songURL: 'https://www.youtube.com/watch?v=VJ920cN2HmA',
+  songDuration: '3:15',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9175cd-22ab-436d-937c-03b0bcf1ad69/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Iceland',
+  artistsNames: 'Pollapönk',
+  songName: 'No Prejudice',
+  songURL: 'https://www.youtube.com/watch?v=V5ZG378DH1c',
+  songDuration: '2:57',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9175b1-ec93-4105-a220-2e78c613d223/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Belarus',
+  artistsNames: 'Teo',
+  songName: 'Cheesecake',
+  songURL: 'https://www.youtube.com/watch?v=tImGMW-4eHY',
+  songDuration: '3:17',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9173d5-8133-4dee-b65a-dba39cf1f31c/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'United Kingdom',
+  artistsNames: 'Molly',
+  songName: 'Children of the Universe',
+  songURL: 'https://www.youtube.com/watch?v=C6w7tmWvm6M',
+  songDuration: '3:21',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9175ec-8d35-4f70-a60d-1fa7046cfd60/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Germany',
+  artistsNames: 'Elaiza',
+  songName: 'Is it right',
+  songURL: 'https://www.youtube.com/watch?v=BFuGH2Kp9dI',
+  songDuration: '3:18',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917599-bceb-427f-8c91-5ad397397825/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Montenegro',
+  artistsNames: 'Sergej Ćetković',
+  songName: 'Moj Svijet',
+  songURL: 'https://www.youtube.com/watch?v=6FJtzRSKHKg',
+  songDuration: '3:22',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9175c8-76de-499c-b3d9-80f070094814/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Greece',
+  artistsNames: 'Freaky Fortune feat. RiskyKidd',
+  songName: 'Rise Up',
+  songURL: 'https://www.youtube.com/watch?v=c9y6A1uXLn8',
+  songDuration: '3:19',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9175a3-c063-4c47-83b5-d94151a077fa/card.JPG',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Italy',
+  artistsNames: 'Emma',
+  songName: 'La Mia Città',
+  songURL: 'https://www.youtube.com/watch?v=8W5ZlalAMV8',
+  songDuration: '3:23',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9175b7-b2d9-4006-989d-7bc9424a94c9/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Azerbaijan',
+  artistsNames: 'Dilara Kazimova',
+  songName: 'Start A Fire',
+  songURL: 'https://www.youtube.com/watch?v=5mPUMPcFQAY',
+  songDuration: '3:18',
+  image: 'https://static.eurovision.tv/hb-cgi/images/9047af1f-f357-41f0-97b6-0769e1e2c4da/card.png',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Malta',
+  artistsNames: 'Firelight',
+  songName: 'Coming Home',
+  songURL: 'https://www.youtube.com/watch?v=E_hT08vzHt8',
+  songDuration: '3:17',
+  image: 'https://static.eurovision.tv/hb-cgi/images/9047b7ab-ef21-48e6-bb02-fda5dbc2c0ca/card.png',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'San Marino',
+  artistsNames: 'Valentina Monetta',
+  songName: 'Maybe (Forse)',
+  songURL: 'https://www.youtube.com/watch?v=_eZNTBJ-Hyc',
+  songDuration: '3:20',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9175d1-ef48-4fc8-bfa4-4314e29a8a2f/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Slovenia',
+  artistsNames: 'Tinkara Kovač',
+  songName: 'Round and round',
+  songURL: 'https://www.youtube.com/watch?v=CiwM1sY3u0s',
+  songDuration: '3:19',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9175d3-502a-4d8a-9495-9e467411b032/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'France',
+  artistsNames: 'TWIN TWIN',
+  songName: 'Moustache',
+  songURL: 'https://www.youtube.com/watch?v=vjkqciwP034',
+  songDuration: '3:06',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917590-b180-4889-8610-e94e5f088b28/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Denmark',
+  artistsNames: 'Emmelie de Forest',
+  songName: 'Only Teardrops',
+  songURL: 'https://www.youtube.com/watch?v=p3f9v8ebuD4',
+  songDuration: '3:20',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917205-aa14-49db-8b15-5f5b8d535eff/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Azerbaijan',
+  artistsNames: 'Farid Mammadov',
+  songName: 'Hold Me',
+  songURL: 'https://www.youtube.com/watch?v=iN3d_V7KVLE',
+  songDuration: '3:10',
+  image: 'https://static.eurovision.tv/hb-cgi/images/9049c43e-88e8-4c8f-8d15-915bd4db33d3/card.png',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Ukraine',
+  artistsNames: 'Zlata Ognevich',
+  songName: 'Gravity',
+  songURL: 'https://www.youtube.com/watch?v=BMxpv8naRd8',
+  songDuration: '3:20',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9173b6-3454-4a0e-b5dd-83308cdb824d/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Norway',
+  artistsNames: 'Margaret Berger',
+  songName: 'I Feed You My Love',
+  songURL: 'https://www.youtube.com/watch?v=tc6a4EV63uM',
+  songDuration: '3:26',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917375-f3b2-45fe-a938-97df57bc04a7/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Russia',
+  artistsNames: 'Dina Garipova',
+  songName: 'What If',
+  songURL: 'https://www.youtube.com/watch?v=wHNwk3Oez8U',
+  songDuration: '3:24',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91738d-7ca1-4604-b975-6043c45316ca/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Greece',
+  artistsNames: 'Koza Mostra feat. Agathon Iakovidis',
+  songName: 'Alcohol Is Free',
+  songURL: 'https://www.youtube.com/watch?v=_AfrOZersNk',
+  songDuration: '3:20',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917222-7f45-4d70-803c-71b2751be0b5/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Italy',
+  artistsNames: 'Marco Mengoni',
+  songName: "L'Essenziale",
+  songURL: 'https://www.youtube.com/watch?v=S8oaxDV1q6o',
+  songDuration: '3:24',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91722f-c53e-4ed2-b953-c2624261324b/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Malta',
+  artistsNames: 'Gianluca',
+  songName: 'Tomorrow',
+  songURL: 'https://www.youtube.com/watch?v=VK4TvZeL6c0',
+  songDuration: '3:11',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91736d-1850-4ec7-866d-95514d6877de/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'The Netherlands',
+  artistsNames: 'Anouk',
+  songName: 'Birds',
+  songURL: 'https://www.youtube.com/watch?v=n5iazXvMw5o',
+  songDuration: '3:25',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917374-f5b5-494e-a3fb-f80d2d7f74e7/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Hungary',
+  artistsNames: 'ByeAlex',
+  songName: 'Kedvesem (Zoohacker Remix)',
+  songURL: 'https://www.youtube.com/watch?v=rOimfHq76xk',
+  songDuration: '3:25',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917225-2a00-4df0-b013-6b3e8372f09e/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Moldova',
+  artistsNames: 'Aliona Moon',
+  songName: 'O Mie',
+  songURL: 'https://www.youtube.com/watch?v=xckgLUv73Jc',
+  songDuration: '3:19',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917370-e944-44ac-a4a9-2243d837659e/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Belgium',
+  artistsNames: 'Roberto Bellarosa',
+  songName: 'Love Kills',
+  songURL: 'https://www.youtube.com/watch?v=dCl7OUFNSCA',
+  songDuration: '3:22',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9171fb-245f-4ba6-aea8-9d4d89b4743d/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Romania',
+  artistsNames: 'Cezar',
+  songName: "It's My Life",
+  songURL: 'https://www.youtube.com/watch?v=OV3xp5ZXSYA',
+  songDuration: '3:09',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91738a-8319-4352-b1ce-58d3fd589d8d/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Sweden',
+  artistsNames: 'Robin Stjernberg',
+  songName: 'You',
+  songURL: 'https://www.youtube.com/watch?v=vtjdTPnCcu0',
+  songDuration: '3:29',
+  image: 'https://static.eurovision.tv/hb-cgi/images/9049d23f-8daf-49ba-87ce-00505d886984/card.png',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Georgia',
+  artistsNames: 'Nodi Tatishvili & Sophie Gelovani',
+  songName: 'Waterfall',
+  songURL: 'https://www.youtube.com/watch?v=-n3mwx0vQDE',
+  songDuration: '3:20',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91721a-86e0-4368-a7ba-865773205dae/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Belarus',
+  artistsNames: 'Alyona Lanskaya',
+  songName: 'Solayoh',
+  songURL: 'https://www.youtube.com/watch?v=XKewBfUE2Mg',
+  songDuration: '3:16',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9171fa-0db3-4e54-9b0e-33da37d11e0f/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Iceland',
+  artistsNames: 'Eythor Ingi',
+  songName: 'Ég Á Líf',
+  songURL: 'https://www.youtube.com/watch?v=GzE88IYzXLI',
+  songDuration: '3:19',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91722a-c567-4cfb-b03e-126cf4b8dfab/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Armenia',
+  artistsNames: 'Dorians',
+  songName: 'Lonely Planet',
+  songURL: 'https://www.youtube.com/watch?v=UGOSZ7Uufno',
+  songDuration: '3:18',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9171f2-805b-49ea-9498-d88c03cb50c8/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'United Kingdom',
+  artistsNames: 'Bonnie Tyler',
+  songName: 'Believe In Me',
+  songURL: 'https://www.youtube.com/watch?v=-agn-ERgTXA',
+  songDuration: '3:18',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9173b9-770f-4e97-b7e3-5b6ea4d6d1e8/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Estonia',
+  artistsNames: 'Birgit',
+  songName: 'Et Uus Saaks Alguse',
+  songURL: 'https://www.youtube.com/watch?v=Ooo6GvZNLhI',
+  songDuration: '3:19',
+  image: 'https://static.eurovision.tv/hb-cgi/images/9049c97f-d395-4a4d-8f13-4b25e38fafc0/card.png',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Germany',
+  artistsNames: 'Cascada',
+  songName: 'Glorious',
+  songURL: 'https://www.youtube.com/watch?v=3HYTd7WDCPg',
+  songDuration: '3:16',
+  image: 'https://static.eurovision.tv/hb-cgi/images/9049cb18-a613-41bc-b654-8764c39596e6/card.png',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Lithuania',
+  artistsNames: 'Andrius Pojavis',
+  songName: 'Something',
+  songURL: 'https://www.youtube.com/watch?v=0VLhnzk_dAs',
+  songDuration: '3:27',
+  image: 'https://static.eurovision.tv/hb-cgi/images/9049cd6e-7fb1-40db-b0ee-22243e6f2a72/card.png',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'France',
+  artistsNames: 'Amandine Bourgeois',
+  songName: "L'enfer Et Moi",
+  songURL: 'https://www.youtube.com/watch?v=hQwiQj5Dyj8',
+  songDuration: '3:13',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917218-d8f3-4d29-8301-0bcd11242509/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Finland',
+  artistsNames: 'Krista Siegfrids',
+  songName: 'Marry Me',
+  songURL: 'https://www.youtube.com/watch?v=9QKvh5b8680',
+  songDuration: '3:12',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917214-39a3-4032-b1c3-eab2ff1ae55b/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Spain',
+  artistsNames: 'ESDM',
+  songName: 'Contigo Hasta El Final (With You Until The End)',
+  songURL: 'https://www.youtube.com/watch?v=5o_DnM_ANF8',
+  songDuration: '3:25',
+  image: 'https://static.eurovision.tv/hb-cgi/images/9049d0ce-e38e-4541-b4d3-a385e08638b1/card.png',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Ireland',
+  artistsNames: 'Ryan Dolan',
+  songName: 'Only Love Survives',
+  songURL: 'https://www.youtube.com/watch?v=4tgtyl_5x5Y',
+  songDuration: '3:25',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91722d-4604-4497-80cf-8e9d41e06e1b/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Sweden',
+  artistsNames: 'Loreen',
+  songName: 'Euphoria',
+  songURL: 'https://www.youtube.com/watch?v=Pfo-8z86x80',
+  songDuration: '3:32',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d917f59-2009-49ec-8a58-27c7a262488f/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Russia',
+  artistsNames: 'Buranovskiye Babushki',
+  songName: 'Party For Everybody',
+  songURL: 'https://www.youtube.com/watch?v=BgUstrmJzyc',
+  songDuration: '3:32',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9171cd-2fdc-48df-857a-321d4fd5d2d1/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Serbia',
+  artistsNames: 'Željko Joksimović',
+  songName: 'Nije Ljubav Stvar',
+  songURL: 'https://www.youtube.com/watch?v=R9x9VbJzaDQ',
+  songDuration: '3:23',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9171cf-e174-48a0-8f30-99e2afa366bc/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Azerbaijan',
+  artistsNames: 'Sabina Babayeva',
+  songName: 'When The Music Dies',
+  songURL: 'https://www.youtube.com/watch?v=yzT7O3Fnwpk',
+  songDuration: '3:32',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150f4-73b1-462a-84cd-6d8d6823fd41/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Albania',
+  artistsNames: 'Rona Nishliu',
+  songName: 'Suus',
+  songURL: 'https://www.youtube.com/watch?v=671tCjePT3w',
+  songDuration: '3:16',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150e8-f386-42b6-ab6f-19592122a398/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Estonia',
+  artistsNames: 'Ott Lepland',
+  songName: 'Kuula',
+  songURL: 'https://www.youtube.com/watch?v=T7BaTBe0UD8',
+  songDuration: '3:34',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9152a2-18b0-4967-8b8b-240d14389a3b/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Turkey',
+  artistsNames: 'Can Bonomo',
+  songName: 'Love Me Back',
+  songURL: 'https://www.youtube.com/watch?v=3Qa7_y21oOY',
+  songDuration: '3:34',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9171e9-487e-4d13-b76c-b48acd5e2c7b/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Germany',
+  artistsNames: 'Roman Lob',
+  songName: 'Standing Still',
+  songURL: 'https://www.youtube.com/watch?v=cScJPH20P3A',
+  songDuration: '3:32',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9171a7-019e-4f35-999e-14b3a7ead5d6/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Italy',
+  artistsNames: 'Nina Zilli',
+  songName: "L'Amore È Femmina (Out Of Love)",
+  songURL: 'https://www.youtube.com/watch?v=v0kGpDEvtbQ',
+  songDuration: '3:31',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9171ae-49ea-4e50-a1a8-135ec507fd6b/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Spain',
+  artistsNames: 'Pastora Soler',
+  songName: 'Quédate Conmigo (Stay With Me)',
+  songURL: 'https://www.youtube.com/watch?v=U8J1b62wOao',
+  songDuration: '3:33',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9171d8-e7a2-40b3-a8a3-0ed231d20fd2/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Moldova',
+  artistsNames: 'Pasha Parfeny',
+  songName: 'Lăutar',
+  songURL: 'https://www.youtube.com/watch?v=vIy0EtEeLEw',
+  songDuration: '3:33',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9171bb-e9f0-4e4c-b3ab-ddf32475bfe4/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Romania',
+  artistsNames: 'Mandinga',
+  songName: 'Zaleilah',
+  songURL: 'https://www.youtube.com/watch?v=K3ruy639kTQ',
+  songDuration: '3:31',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9171cb-4e21-42f9-956b-a510c0df1e01/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'North Macedonia',
+  artistsNames: 'Kaliopi',
+  songName: 'Crno I Belo',
+  songURL: 'https://www.youtube.com/watch?v=MSuCdNEy9w0',
+  songDuration: '3:32',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9171a4-3a06-4f02-8a98-68944bcb8688/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Lithuania',
+  artistsNames: 'Donny Montell',
+  songName: 'Love Is Blind',
+  songURL: 'https://www.youtube.com/watch?v=x2vNoZnJxgY',
+  songDuration: '3:32',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9171b1-c6cd-4a8f-ae46-85a912677b6a/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Ukraine',
+  artistsNames: 'Gaitana',
+  songName: 'Be My Guest',
+  songURL: 'https://www.youtube.com/watch?v=sLsTn_li5d8',
+  songDuration: '3:33',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9171ed-001d-4372-b603-2527abf8576d/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Cyprus',
+  artistsNames: 'Ivi Adamou',
+  songName: 'La La Love',
+  songURL: 'https://www.youtube.com/watch?v=MtMHBXO_n48',
+  songDuration: '3:31',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91528f-5d77-439c-9fcd-feb7e9471b9a/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Greece',
+  artistsNames: 'Eleftheria Eleftheriou',
+  songName: 'Aphrodisiac',
+  songURL: 'https://www.youtube.com/watch?v=cFOzbmCqkJA',
+  songDuration: '3:12',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9171a8-126d-4b23-a350-7f275b86e332/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Bosnia & Herzegovina',
+  artistsNames: 'Maya Sar',
+  songName: 'Korake Ti Znam',
+  songURL: 'https://www.youtube.com/watch?v=81hIbZNoFU8',
+  songDuration: '3:32',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d915281-578f-43af-82c8-c580db5a10a2/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Ireland',
+  artistsNames: 'Jedward',
+  songName: 'Waterline',
+  songURL: 'https://www.youtube.com/watch?v=O_9QaVC-NKw',
+  songDuration: '3:31',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9171ad-481d-46cc-bf14-6e296ae50779/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Iceland',
+  artistsNames: 'Greta Salóme & Jónsi',
+  songName: 'Never Forget',
+  songURL: 'https://www.youtube.com/watch?v=zRqmHRbJvTo',
+  songDuration: '3:32',
+  image: 'https://static.eurovision.tv/hb-cgi/images/904bb27b-ed34-4c3c-90b3-eed47b2cb756/card.png',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Malta',
+  artistsNames: 'Kurt Calleja',
+  songName: 'This Is The Night',
+  songURL: 'https://www.youtube.com/watch?v=EgaX5QuMGR8',
+  songDuration: '3:31',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9171b6-ca1c-4d6c-ba1e-c5caa396a8b6/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'France',
+  artistsNames: 'Anggun',
+  songName: 'Echo (You And I)',
+  songURL: 'https://www.youtube.com/watch?v=0DZ7DbdeOeE',
+  songDuration: '3:32',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9171a0-a960-4c0e-9813-d2329da96b14/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Denmark',
+  artistsNames: 'Soluna Samay',
+  songName: "Should've Known Better",
+  songURL: 'https://www.youtube.com/watch?v=U5X2r_t-KBk',
+  songDuration: '3:32',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91529b-ef2c-4d53-8560-3a73e5119a17/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Hungary',
+  artistsNames: 'Compact Disco',
+  songName: 'Sound Of Our Hearts',
+  songURL: 'https://www.youtube.com/watch?v=sw85G2AlU2c',
+  songDuration: '3:33',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9171a9-9ac8-4603-8994-51c6fae203a6/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'United Kingdom',
+  artistsNames: 'Engelbert Humperdinck',
+  songName: 'Love Will Set You Free',
+  songURL: 'https://www.youtube.com/watch?v=rXw4Q5jbNqQ',
+  songDuration: '3:32',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9171eb-d32d-4024-8bb6-58f395bfa8c0/card.JPG',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Norway',
+  artistsNames: 'Tooji',
+  songName: 'Stay',
+  songURL: 'https://www.youtube.com/watch?v=-ZaxIY1VAbM',
+  songDuration: '3:18',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9171c7-68e1-48eb-83b0-0559ddc1ed87/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Azerbaijan',
+  artistsNames: 'Ell/Nikki',
+  songName: 'Running Scared',
+  songURL: 'https://www.youtube.com/watch?v=_0tlQUW5X0U',
+  songDuration: '3:14',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d915009-3437-4d4b-999b-a58280c7c02a/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Italy',
+  artistsNames: 'Raphael Gualazzi',
+  songName: 'Madness Of Love',
+  songURL: 'https://www.youtube.com/watch?v=TE0uNLp3LuU',
+  songDuration: '3:15',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150d4-bcf9-4515-88fa-81761cf60dbd/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Sweden',
+  artistsNames: 'Eric Saade',
+  songName: 'Popular',
+  songURL: 'https://www.youtube.com/watch?v=-04pUETT7oI',
+  songDuration: '3:20',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150e2-a8f9-4d8a-b490-857082f35c22/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Ukraine',
+  artistsNames: 'Mika Newton',
+  songName: 'Angel',
+  songURL: 'https://www.youtube.com/watch?v=mx1wAj_oVdE',
+  songDuration: '3:35',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150e6-e2af-4641-8dbc-fc1f6e999fb8/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Denmark',
+  artistsNames: 'A Friend In London',
+  songName: 'New Tomorrow',
+  songURL: 'https://www.youtube.com/watch?v=YDXeK0r3aKs',
+  songDuration: '3:14',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d915070-c633-4443-874e-8ad76c1caf2c/card.JPG',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Bosnia & Herzegovina',
+  artistsNames: 'Dino Merlin',
+  songName: 'Love In Rewind',
+  songURL: 'https://www.youtube.com/watch?v=mBg3coarF_8',
+  songDuration: '3:15',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d91500b-db71-4c29-bbe9-3026e76a8f55/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Greece',
+  artistsNames: 'Loucas Yiorkas feat. Stereo Mike',
+  songName: 'Watch My Dance',
+  songURL: 'https://www.youtube.com/watch?v=FdZzklXoAOg',
+  songDuration: '3:19',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150d0-f1e7-4079-b526-9f6a31ab288e/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Ireland',
+  artistsNames: 'Jedward',
+  songName: 'Lipstick',
+  songURL: 'https://www.youtube.com/watch?v=XgrlG6hQbNM',
+  songDuration: '3:14',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150d3-e0a1-4c37-b4fb-b7917acbb845/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Georgia',
+  artistsNames: 'Eldrine',
+  songName: 'One More Day',
+  songURL: 'https://www.youtube.com/watch?v=s2EwiTBiEDU',
+  songDuration: '3:06',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150d0-0b76-4434-a2a7-2945a291d17d/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Germany',
+  artistsNames: 'Lena',
+  songName: 'Taken By A Stranger',
+  songURL: 'https://www.youtube.com/watch?v=KqZprvpWlcE',
+  songDuration: '3:21',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150d0-94d1-45b2-8212-c100f26c574d/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'United Kingdom',
+  artistsNames: 'Blue',
+  songName: 'I Can',
+  songURL: 'https://www.youtube.com/watch?v=y1dXMWWq6y8',
+  songDuration: '3:21',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150e8-4c0b-4438-a612-aede03189586/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Moldova',
+  artistsNames: 'Zdob și Zdub',
+  songName: 'So Lucky',
+  songURL: 'https://www.youtube.com/watch?v=nHAY_OVN_gY',
+  songDuration: '3:16',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150d8-cd4e-49ff-adb6-22edcae6b911/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Slovenia',
+  artistsNames: 'Maja Keuc',
+  songName: 'No One',
+  songURL: 'https://www.youtube.com/watch?v=5vqjb2OYnYs',
+  songDuration: '3:18',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150e0-3a09-4c53-8cb5-e2e74d86e753/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Serbia',
+  artistsNames: 'Nina',
+  songName: 'Čaroban',
+  songURL: 'https://www.youtube.com/watch?v=-CWvXKxjCs8',
+  songDuration: '3:10',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150de-ab47-466d-8f65-502a4b4710f3/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'France',
+  artistsNames: 'Amaury Vassili',
+  songName: 'Sognu',
+  songURL: 'https://www.youtube.com/watch?v=OTiBNPT-x_Y',
+  songDuration: '3:04',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150ce-39e3-4d53-9534-8936f3468ff0/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Russia',
+  artistsNames: 'Alexej Vorobjov',
+  songName: 'Get You',
+  songURL: 'https://www.youtube.com/watch?v=C-3ohaRN3MM',
+  songDuration: '3:17',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150dd-766e-406a-a027-f86f150d689b/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Romania',
+  artistsNames: 'Hotel FM',
+  songName: 'Change',
+  songURL: 'https://www.youtube.com/watch?v=2a1Q_hpGLbs',
+  songDuration: '3:18',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150dc-9bb7-4621-922f-b8ebef94924f/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Austria',
+  artistsNames: 'Nadine Beiler',
+  songName: 'The Secret Is Love',
+  songURL: 'https://www.youtube.com/watch?v=UsBC5AB1tFo',
+  songDuration: '3:21',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d915008-39f0-4257-a8cf-6bafd99f4e35/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Lithuania',
+  artistsNames: 'Evelina Sašenko',
+  songName: "C'est Ma Vie",
+  songURL: 'https://www.youtube.com/watch?v=D4Tvc9S_1BU',
+  songDuration: '3:23',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150d5-f39b-4fb8-bd3d-fd2c7996eb46/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Iceland',
+  artistsNames: "Sjonni's Friends",
+  songName: 'Coming Home',
+  songURL: 'https://www.youtube.com/watch?v=apc_qJf3nws',
+  songDuration: '3:18',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150d3-3033-4255-ad88-341ada2bd905/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Finland',
+  artistsNames: 'Paradise Oskar',
+  songName: 'Da Da Dam',
+  songURL: 'https://www.youtube.com/watch?v=1Fj9of4IzFU',
+  songDuration: '3:19',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150cd-cdb8-49b0-8c38-db5ced40b2e9/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Hungary',
+  artistsNames: 'Kati Wolf',
+  songName: 'What About My Dreams?',
+  songURL: 'https://www.youtube.com/watch?v=IuGUz1ExflY',
+  songDuration: '3:21',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150d2-72f5-4926-9428-48e7e63cf54f/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Spain',
+  artistsNames: 'Lucía Pérez',
+  songName: "Que Me Quiten Lo Bailao - They Can't Take The Fun Away From Me",
+  songURL: 'https://www.youtube.com/watch?v=GSOEmM0h-aE',
+  songDuration: '3:11',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150e1-20bf-4d4d-b6f0-b7a8ab8703ca/card.JPG',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Estonia',
+  artistsNames: 'Getter Jaani',
+  songName: 'Rockefeller Street',
+  songURL: 'https://www.youtube.com/watch?v=UxvmdR7oYdQ',
+  songDuration: '3:21',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150c6-eeb8-4c4d-b22c-a04d1ac202a5/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+{
+  countryName: 'Switzerland',
+  artistsNames: 'Anna Rossinelli',
+  songName: 'In Love For A While',
+  songURL: 'https://www.youtube.com/watch?v=M03Nx6gHd90',
+  songDuration: '3:00',
+  image: 'https://static.eurovision.tv/hb-cgi/images/8d9150e4-b5d0-4f62-b2fc-c3154ecb313c/card.jpg',
+  isFinalist: true,
+  isWinner: false
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `babel-node ./testFunction.js`[39m
+[32m[nodemon] clean exit - waiting for changes before restart[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `babel-node ./testFunction.js`[39m
+[32m[nodemon] clean exit - waiting for changes before restart[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `babel-node ./testFunction.js`[39m
+[32m[nodemon] clean exit - waiting for changes before restart[39m

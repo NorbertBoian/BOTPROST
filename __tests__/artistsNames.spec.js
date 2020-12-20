@@ -120,6 +120,80 @@ describe("getFeaturedArtist", () => {
     const output = [["Moldoveanu"], "Ce-mi mai place femeile"];
     expect(getSongAndArtistsFromTitle(...input)).toEqual(output);
   });
+  test("feat in parenthesis in songName", () => {
+    const input = ["Connect-R - Daca Dragostea Dispare (feat Alex)"];
+    const output = [["Connect-R", "Alex"], "Daca Dragostea Dispare"];
+    expect(getSongAndArtistsFromTitle(...input)).toEqual(output);
+  });
+  test("idk1", () => {
+    const input = [
+      "MACKLEMORE & RYAN LEWIS - THRIFT SHOP FEAT. WANZ (OFFICIAL VIDEO)",
+    ];
+    const output = [["MACKLEMORE", "RYAN LEWIS", "WANZ"], "THRIFT SHOP"];
+    expect(getSongAndArtistsFromTitle(...input)).toEqual(output);
+  });
+  test("idk2", () => {
+    const input = ["ADDA - Lupii (Nu plange, ADDA - 2016)"];
+    const output = [["ADDA"], "Lupii"];
+    expect(getSongAndArtistsFromTitle(...input)).toEqual(output);
+  });
+  test("idk3", () => {
+    const input = ["G-Eazy x Bebe Rexha - Me, Myself & I"];
+    const output = [["G-Eazy", "Bebe Rexha"], "Me, Myself & I"];
+    expect(getSongAndArtistsFromTitle(...input)).toEqual(output);
+  });
+  test("idk4", () => {
+    const input = ["Jonas Brothers - SOS Music Video - Official (HQ)"];
+    const output = [["Jonas Brothers"], "SOS"];
+    expect(getSongAndArtistsFromTitle(...input)).toEqual(output);
+  });
+  test("idk5", () => {
+    const input = [
+      "Marshmello & Anne-Marie - FRIENDS (Lyric Video) *OFFICIAL FRIENDZONE ANTHEM*",
+    ];
+    const output = [["Marshmello", "Anne-Marie"], "FRIENDS"];
+    expect(getSongAndArtistsFromTitle(...input)).toEqual(output);
+  });
+  test("idk6", () => {
+    const input = ["Adele performing Someone Like You | BRIT Awards 2011"];
+    const output = [["Adele"], "Someone Like You"];
+    expect(getSongAndArtistsFromTitle(...input)).toEqual(output);
+  });
+  test("idk7", () => {
+    const input = [
+      "G-Eazy - No Limit REMIX ft. A$AP Rocky, Cardi B, French Montana, Juicy J, Belly",
+    ];
+    const output = [
+      ["G-Eazy", "A$AP Rocky", "Cardi B", "French Montana", "Juicy J", "Belly"],
+      "No Limit",
+    ];
+    expect(getSongAndArtistsFromTitle(...input)).toEqual(output);
+  });
+  test("idk8", () => {
+    const input = [
+      "Sensualidad - Bad Bunny X Prince Royce X J Balvin X Dj Luian X Mambo Kingz",
+    ];
+    const output = [
+      ["Sensualidad", "Prince Royce", "J Balvin", "Dj Luian", "Mambo Kingz"],
+      "Bad Bunny",
+    ];
+    expect(getSongAndArtistsFromTitle(...input)).toEqual(output);
+  });
+  test("idk9", () => {
+    const input = ["Doar Tu [MANDINGA feat CONNECT-R]"];
+    const output = [["CONNECT-R"], "Doar Tu"];
+    expect(getSongAndArtistsFromTitle(...input)).toEqual(output);
+  });
+  test("idk10", () => {
+    const input = [
+      "Sensualidad - Bad Bunny 🌎 Prince Royce 🔥 J Balvin 🌪 Dj Luian ☀ Mambo Kingz",
+    ];
+    const output = [
+      ["Sensualidad", "Prince Royce", "J Balvin", "Dj Luian", "Mambo Kingz"],
+      "Bad Bunny",
+    ];
+    expect(getSongAndArtistsFromTitle(...input)).toEqual(output);
+  });
   test("No artist \\w channel", () => {
     const input = ["Where the Wild Wolves Have Gone", "Powerwolf Official"];
     const output = [["Powerwolf"], "Where the Wild Wolves Have Gone"];

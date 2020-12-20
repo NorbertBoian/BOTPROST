@@ -39,7 +39,8 @@ export const quiz = async (args, message, playlistURL, maxSongs, prefix) => {
       const songInfo = await shuffledGetSongsInfoFunctions[
         songInfoFunctionsIndex
       ]();
-      if (typeof songInfo === "object") songsInfo.push(songInfo);
+      if (typeof songInfo === "object" && !(songInfo instanceof Error))
+        songsInfo.push(songInfo);
       if (
         songsInfo.length < possibleMaxSongs &&
         songsInfo.length < stopAt &&
@@ -119,7 +120,11 @@ export const quiz = async (args, message, playlistURL, maxSongs, prefix) => {
             }
           } else {
             dispatcher.on("error", async () => {
-              console.log("ERROR HANDLING RN on error");
+              console.log(
+                "ERROR HANDLING RN on error",
+                songsInfo[songIndex],
+                songIndex
+              );
             });
             dispatcher.on("start", async () => {
               const filter = (messageToFilter) => !messageToFilter.author.bot;

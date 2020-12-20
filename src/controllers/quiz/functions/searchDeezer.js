@@ -1,37 +1,98 @@
 import stringSimilarity from "string-similarity";
-import { getSongAndArtistsFromTitle } from "./getSongAndArtistsFromTitle";
+import {
+  getSongAndArtistsFromTitle,
+  featuredAllCases,
+  removeParensRegEx,
+  artistsSeparators,
+} from "./getSongAndArtistsFromTitle";
 import { deezerAPI as deezer } from "../functions/deezerAPI";
 import { lastFmWithPromise } from "./lastFmWithPromise";
+import { unwantedChannels } from "../quizExports";
+import { cleanUpString } from "./cleanUpTitle";
 export const searchDeezer = (playListData) => {
   const deezerGetSongInfoFunctions = playListData.map(
     (songData) => async () => {
       try {
+        //Search Spotify if not on Deezer
+        //Check yt description
+        //Remove between * *
         const { songTitle, songChannel, songDuration, songURL } = songData;
+        // console.log(songTitle);
         const [
           initialArtistsNames,
           initialSongName,
         ] = getSongAndArtistsFromTitle(songTitle, songChannel);
-        const searchQuery = `${initialArtistsNames.join(
-          " "
-        )} ${initialSongName}`;
+        let searchQuery = "";
+        const hasNoSeparator = !songTitle.includes(" - ");
+        const unwantedChannelFilter = (unwantedChannel) =>
+          unwantedChannel === songChannel;
+        const isUwantedChannel = unwantedChannels.some(unwantedChannelFilter);
+        if (hasNoSeparator && isUwantedChannel)
+          searchQuery = cleanUpString(
+            songTitle
+              .replace(removeParensRegEx, "")
+              .replace(
+                RegExp(
+                  `(?<=\\W)(?:${featuredAllCases})(?:\\.|[^\\S\\r\\n])`,
+                  "g"
+                ),
+                ""
+              )
+              .replace(
+                RegExp(
+                  `[^\\S\\r\\n]?(?:${artistsSeparators})[^\\S\\r\\n]?`,
+                  "g"
+                ),
+                " "
+              )
+          );
+        else
+          searchQuery = `${initialArtistsNames.join(
+            " "
+          )} ${initialSongName
+            .replace(/(?:Hit|HIT|hit)(?:[^\S\r\n]|$)/g, "")
+            .replace(/\s?-\s*$/g, "")}`.trim();
         // console.log(searchQuery);
         const deezerSearchResult = await deezer.search.track(
           searchQuery,
           "RANKING"
         );
-        const deezerSearchResultData = deezerSearchResult.data;
-        const deezerFoundArtistsNames = deezerSearchResultData.map(
-          (foundSongData) => foundSongData.artist.name
+        const deezerSearchResultData = deezerSearchResult.data
+          ? deezerSearchResult.data
+          : [];
+        const deezerFoundArtistsAndSongs = deezerSearchResultData.map(
+          (foundSongData) => [
+            foundSongData.artist.name,
+            foundSongData.title_short,
+          ]
         );
-        const chooseResultFilter = (foundArtist) => {
-          const artistSimilarEnoughFfilter = (artistName) =>
-            stringSimilarity.compareTwoStrings(
-              artistName.toLowerCase(),
-              foundArtist.toLowerCase()
-            ) > 0.8;
-          return initialArtistsNames.some(artistSimilarEnoughFfilter);
+        const chooseResultFilter = ([foundArtist, foundSong]) => {
+          const artistSimilarEnoughFfilter = (artistName) => {
+            if (
+              stringSimilarity.compareTwoStrings(
+                artistName.toLowerCase(),
+                foundArtist.toLowerCase()
+              ) > 0.8
+            )
+              return true;
+            else
+              return (
+                stringSimilarity.compareTwoStrings(
+                  artistName.toLowerCase(),
+                  foundSong.toLowerCase()
+                ) > 0.8
+              );
+          };
+          if (hasNoSeparator && isUwantedChannel)
+            return (
+              stringSimilarity.compareTwoStrings(
+                songTitle.toLowerCase(),
+                `${foundSong} ${foundArtist}`.toLowerCase()
+              ) > 0.5
+            );
+          else return initialArtistsNames.some(artistSimilarEnoughFfilter);
         };
-        const deezerChosenResultIndex = deezerFoundArtistsNames.findIndex(
+        const deezerChosenResultIndex = deezerFoundArtistsAndSongs.findIndex(
           chooseResultFilter
         );
         if (deezerChosenResultIndex > -1) {
@@ -60,7 +121,8 @@ export const searchDeezer = (playListData) => {
           const [artistsNames, songName] = getSongAndArtistsFromTitle(
             `${deezerArtistNames} - ${deezerSongName}`
           );
-          // console.log(artistsNames.join(" "), songName);
+          // console.log("DEEZER", artistsNames.join(" "), songName);
+          // console.log(artistsNames.join(" &** "), songName);
           const songInfo = {
             songName: songName,
             artistsNames,
@@ -71,16 +133,17 @@ export const searchDeezer = (playListData) => {
           return songInfo;
         } else {
           const lastFmSearchResult = await lastFmWithPromise("trackSearch", {
-            q: searchQuery,
+            q: searchQuery ? searchQuery : " ",
             limit: 100,
           });
           const lastFmSearchResultData = lastFmSearchResult.result;
-          const lastFmFoundArtistsNames = lastFmSearchResultData.map(
-            (foundSongData) => foundSongData.artistName
+          const lastFmFoundArtistsAndSongs = lastFmSearchResultData.map(
+            (foundSongData) => [foundSongData.artistName, foundSongData.name]
           );
-          const lastFmChosenResultIndex = lastFmFoundArtistsNames.findIndex(
+          const lastFmChosenResultIndex = lastFmFoundArtistsAndSongs.findIndex(
             chooseResultFilter
           );
+          console.log("LASTFM", searchQuery);
           if (lastFmChosenResultIndex > -1) {
             const lastFmArtistName =
               lastFmSearchResultData[lastFmChosenResultIndex].artistName;
@@ -96,7 +159,8 @@ export const searchDeezer = (playListData) => {
             const [artistsNames, songName] = getSongAndArtistsFromTitle(
               `${lastFmArtistName} - ${lastFmSongName}`
             );
-            // console.log(artistsNames.join(" "), songName);
+            // console.log(`${lastFmArtistName} - ${lastFmSongName}`);
+            // console.log(artistsNames.join(" &** "), " 888 ", songName);
             const songInfo = {
               songName: songName,
               artistsNames,

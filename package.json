@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watch",
-    "start": "nodemon --ignore db/ --ignore .vscode/ --ignore __tests__ --exec babel-node ./src/bot.js",
-    "testFunction": "nodemon --ignore db/ --ignore .vscode/ --ignore __tests__ --ignore src/ --exec babel-node ./src/controllers/quiz/functions/testFunction.js",
-    "log": "nodemon --ignore db/ --exec babel-node ./src/bot.js > .log-file.txt"
+    "start": "nodemon --ignore db/  --ignore __tests__ --ignore testFunction.js --exec babel-node ./src/bot.js",
+    "testFunction": "nodemon --ignore db/ --ignore __tests__ --ignore src/ --exec babel-node ./testFunction.js",
+    "log": "nodemon --ignore db/  --ignore __tests__ --ignore testFunction.js --exec babel-node ./src/bot.js > .log-file.txt",
+    "logTest": "nodemon --ignore db/ --ignore __tests__ --ignore src/ --exec babel-node ./testFunction.js > .log-file.txt",
+    "buildDatabase": "babel-node ./src/controllers/quiz/functions/buildDatabase.js",
+    "fillDatabase": "babel-node ./src/controllers/quiz/functions/fillDatabase.js"
   },
   "repository": {
     "type": "git",
@@ -27,13 +30,17 @@
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
     "ffmpeg-static": "^4.2.7",
+    "jsdom": "^16.4.0",
     "keyv": "^4.0.3",
     "keyv-file": "^0.2.0",
+    "knex": "^0.21.14",
     "last-fm": "^5.3.0",
     "node-fetch": "^2.6.1",
+    "pg": "^8.5.1",
     "string-similarity": "^4.0.3",
-    "ytdl-core": "^4.1.4",
-    "ytpl": "^2.0.0-alpha.3"
+    "ytdl-core": "^4.1.6",
+    "ytpl": "^2.0.0-alpha.3",
+    "ytsr": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
