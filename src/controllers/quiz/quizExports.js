@@ -215,6 +215,8 @@ const prostiiOricumOnlyFirstCap = [
   "Night version",
   "Furious 7 Soundtrack",
   "Soundtrack",
+  "Warner Vault",
+  "Old version",
 ].join("|");
 // const prostiiOricumAllCaps = prostiiOricumOnlyFirstCap.map((string) =>
 //   string.toUpperCase()
@@ -298,6 +300,13 @@ export const unwantedChannels = [
   "Walt Disney Animation Studios",
   "GoodClipsDaily",
   "Spinnin' Records",
+  "valy17",
+  "DJJPitu",
+  "starmuzica",
+  "Mara eM",
+  "XxAllKindsOfMusicxX",
+  "gigibecali56",
+  "96alexutza",
 ];
 
 export const prostii = `${unwantedChannels.join(

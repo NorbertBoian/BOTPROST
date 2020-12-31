@@ -101,8 +101,7 @@ export const fillDatabase = async (max = Infinity, min = 0) => {
               url: songURL,
               duration: songDuration,
               image,
-              finalist: true,
-              winner: isWinner,
+              placeInFinal: ranking,
             };
             await db("eurovision")
               .insert(songObject)
@@ -118,8 +117,9 @@ export const fillDatabase = async (max = Infinity, min = 0) => {
               url: songURL,
               duration: songDuration,
               image,
-              finalist: isFinalist,
-              winner: isFinalist ? isWinner : false,
+              placeInFinal: isFinalist?ranking:false,
+              placeInSemifinal: !isFinalist?ranking:false,
+              semiFinal:false
             };
             await db("eurovision")
               .insert(songObject)
